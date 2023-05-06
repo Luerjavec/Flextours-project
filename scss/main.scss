@@ -1,0 +1,15 @@
+// Reset and utilities (variables, mixins and maps)
+@import "utilities";
+@import "reset";
+
+// Components
+@import "components/titles&buttons";
+@import "components/header&footer";
+@import "components/banners";
+@import "components/cards";
+@import "components/carousel";
+
+// pages
+@import "pages/index";
+@import "pages/nuestrostours";
+

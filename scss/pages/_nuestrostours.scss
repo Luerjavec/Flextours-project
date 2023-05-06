@@ -1,0 +1,134 @@
+/*PÁGINA 2: NUESTROS TOURS*/
+
+.tours-flex {
+    display: grid;
+    margin: auto;
+    padding: 25px;
+    width: 90vw;
+    column-gap: 25px;
+    row-gap: 14px;
+    grid-template:
+        "flextours_text" auto
+        "card0" 440px
+        / auto;
+    
+    &__container {
+        grid-area: flextours_text;
+        text-align: justify;
+
+        &__text {
+            color:rgb(21, 21, 21);
+            font-size: 1.1rem;
+            line-height: 1.5;
+            font-weight: 300;
+        }
+    }
+}
+
+.tours-gral {
+    margin-top: 40px;
+    padding: 40px 0px;
+
+    &__container {
+        width: 90%;
+        text-align: center;
+        margin: auto;
+
+        &__text {
+            @extend .tours-flex__container__text;
+        }
+    }
+}
+
+.card0 {
+    grid-area: card0;
+    min-width: 220px;
+}
+
+.g-card {
+    border-radius: 25px;
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
+    transition: all .3s ease-in-out;
+}
+
+.g-cards {
+    display: grid;
+    margin: auto;
+    padding: 25px;
+    width: 90vw;
+    column-gap: 25px;
+    row-gap: 40px;
+    grid-template:
+        "card1" 380px
+        "card2" 380px
+        "card3" 380px
+        "card4" 380px
+        "card5" 380px
+        "card6" 380px
+        / auto;
+}
+
+@media (min-width: 700px) {
+    .tours-flex {
+        grid-template:
+        "flextours_text card0" 530px
+        / 2fr 2fr;
+        padding: 50px 20px 20px 20px;
+    }
+
+    .tours {
+        background-image: url("../media/fondo-md-nuestrostours.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+
+    .g-cards {
+        min-width: 550px; 
+        grid-template:
+            "card1 card2" 330px
+            "card4 card2" 100px
+            "card4 card3" 330px
+            "card6 card5" 330px
+                ". card5" 100px
+            / auto auto;
+    }
+    .g-card__body__overlay {
+        font-size: .9rem;
+    }
+
+    .g-card:hover .card-title-big {
+        top: 17%;
+    }
+}
+
+@media (min-width: 992px) {
+    .tours {
+        background-image: url("../media/fondo-lg-nuestrostours.png");
+    }
+    
+    .tours-flex {
+        grid-template:
+        "flextours_text card0" 530px
+        / 4fr 3fr;
+        width: 70%;
+    }
+
+    .tours-flex__container {
+        width: 80%;
+    }
+
+    .g-cards {
+        width: 75vw;
+        min-width: 900px; 
+        grid-template:
+        "card1 card2 card3" 330px
+        "card4 card2 card5" 100px
+        "card4 card6 card5" 330px
+        / auto auto auto;
+    }
+
+}

@@ -1,0 +1,138 @@
+/*HEADER de todas las páginas - Elementos Offcanvas*/
+
+.offcanvas {
+    background-color: rgba(0, 0, 0, 0.83);
+}
+
+.btn-close {
+    background-color: white;
+}
+
+/*HEADER de todas las páginas - Elementos navegables*/
+
+.navbar-toggler{
+    background-color: rgba(255, 255, 255, 0.448);
+
+    &:focus, &:hover{
+        background-color: white;
+    }
+}
+
+.logo {
+    width: 135px;
+    margin-left: 15px;
+}
+
+.nav-link {
+    color: #E8B7A6;
+    font-size: 1.1rem;
+    font-weight: 500;
+    margin: 0px 12px;
+    position: relative;
+    transition: color .2s;
+
+    &:not(.text-white)::after {
+        position: absolute;
+        left: 0;
+        right: 0;
+        margin: auto;
+        bottom: 6px;
+        width: 50%;
+        height: 2px;
+        transition: all .2s;
+        transform: scale(0, 1);
+        transform-origin: 50% 0%;
+        background: #f7f7f7;
+    }
+
+    &:hover{
+        color: #FFFFFF;
+    }
+
+    &:hover::after{
+        transform: scale(1, 1)
+    }
+}
+
+/*HEADER - elemento de búsqueda mobile - siempre desplegado*/
+.searchbar {
+    background-color: #ffffff3e;
+    border-radius: 30px;
+    padding: 5px;
+
+    &__input {
+        color: white;
+        border: 0;
+        outline: 0;
+        background: none;
+        width: 200px;
+        line-height: 40px;
+    
+        &::placeholder {
+            color: white;
+        }
+    }
+
+    &__btn {
+        background-color: transparent;
+        height: 40px;
+        width: 40px;
+        float: right;
+        border-radius: 50%;
+        border: none;
+        color: rgb(255, 255, 255);
+    }
+}
+
+
+
+
+
+/*FOOTER de todas las páginas*/
+
+.footer {
+    background: rgb(0,55,105);
+    background: linear-gradient(126deg, rgba(0,55,105,1) 9%, rgba(0,0,105,1) 100%);
+
+    &__title {
+        font-family:'Nunito', sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        color: #E8B7A6;
+        padding: 10px 0px;
+    }
+
+    &__text, &__link {
+        font-size: 0.9rem;
+        color: white;
+        text-align: justify;
+    }
+
+    &__link {
+        transition: .2s;
+        
+        &:hover {
+            color: #db967f;
+        }
+    }
+}
+
+@media (min-width: 992px) {
+    .searchbar__input {
+        width: 0;
+    }
+
+    .searchbar:hover{
+        &>.searchbar__input {
+            padding: 0 10px;
+            width: 200px;
+            caret-color: transparent;
+            transition: width 0.4s linear;
+        }
+
+        &>.searchbar__btn {
+        background: white;
+        color:  #2f5aa5;
+        }
+    }
+}

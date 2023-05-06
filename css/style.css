@@ -1,0 +1,556 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap");
+/* reseteo de estilos */
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif; }
+
+a {
+  text-decoration: none; }
+
+ul {
+  list-style: none;
+  text-decoration: none; }
+
+i {
+  padding: 0px 5px; }
+
+/*Títulos y botones para todas las páginas */
+.title-big {
+  font-weight: 500;
+  color: #FCF3E6;
+  font-size: 3.3rem;
+  padding: 10px 0px;
+  animation: fadein 1s ease-in-out; }
+
+.title-small {
+  margin: 0 auto 35px auto;
+  padding: 5px 0px;
+  position: relative;
+  color: #2f5aa5;
+  font-size: 2.2rem;
+  font-weight: 500;
+  text-align: center;
+  transition: color .2s; }
+  .title-small::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: -10px;
+    width: 100px;
+    height: 2px;
+    background: #db967f; }
+
+.subtitle-big {
+  font-weight: 500;
+  color: #FCF3E6;
+  font-size: 2rem;
+  padding: 0px 0px 20px 0px;
+  animation: fadein 2s ease-in-out; }
+
+.subtitle-small {
+  color: #2f5aa5;
+  font-weight: 500;
+  padding-top: 30px; }
+
+.title-colored {
+  color: #ff9977; }
+
+.btn-big {
+  font-weight: 500;
+  font-size: 1.4rem;
+  color: #E8B7A6;
+  background-color: transparent;
+  border: 2px solid #E8B7A6;
+  border-radius: 40px;
+  animation: fadein 2.5s ease-in-out; }
+  .btn-big:hover {
+    color: #2f5aa5;
+    background-color: #E8B7A6;
+    border: 2px solid transparent;
+    transition: 0.2s; }
+
+@keyframes fadein {
+  0% {
+    opacity: 0%; }
+  20% {
+    opacity: 0%; }
+  100% {
+    opacity: 100%; } }
+
+/*HEADER de todas las páginas - Elementos Offcanvas*/
+.offcanvas {
+  background-color: rgba(0, 0, 0, 0.83); }
+
+.btn-close {
+  background-color: white; }
+
+/*HEADER de todas las páginas - Elementos navegables*/
+.navbar-toggler {
+  background-color: rgba(255, 255, 255, 0.448); }
+  .navbar-toggler:focus, .navbar-toggler:hover {
+    background-color: white; }
+
+.logo {
+  width: 135px;
+  margin-left: 15px; }
+
+.nav-link {
+  color: #E8B7A6;
+  font-size: 1.1rem;
+  font-weight: 500;
+  margin: 0px 12px;
+  position: relative;
+  transition: color .2s; }
+  .nav-link:not(.text-white)::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin: auto;
+    bottom: 6px;
+    width: 50%;
+    height: 2px;
+    transition: all .2s;
+    transform: scale(0, 1);
+    transform-origin: 50% 0%;
+    background: #f7f7f7; }
+  .nav-link:hover {
+    color: #FFFFFF; }
+  .nav-link:hover::after {
+    transform: scale(1, 1); }
+
+/*HEADER - elemento de búsqueda mobile - siempre desplegado*/
+.searchbar {
+  background-color: #ffffff3e;
+  border-radius: 30px;
+  padding: 5px; }
+  .searchbar__input {
+    color: white;
+    border: 0;
+    outline: 0;
+    background: none;
+    width: 200px;
+    line-height: 40px; }
+    .searchbar__input::placeholder {
+      color: white; }
+  .searchbar__btn {
+    background-color: transparent;
+    height: 40px;
+    width: 40px;
+    float: right;
+    border-radius: 50%;
+    border: none;
+    color: white; }
+
+/*FOOTER de todas las páginas*/
+.footer {
+  background: #003769;
+  background: linear-gradient(126deg, #003769 9%, #000069 100%); }
+  .footer__title {
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #E8B7A6;
+    padding: 10px 0px; }
+  .footer__text, .footer__link {
+    font-size: 0.9rem;
+    color: white;
+    text-align: justify; }
+  .footer__link {
+    transition: .2s; }
+    .footer__link:hover {
+      color: #db967f; }
+
+@media (min-width: 992px) {
+  .searchbar__input {
+    width: 0; }
+  .searchbar:hover > .searchbar__input {
+    padding: 0 10px;
+    width: 200px;
+    caret-color: transparent;
+    transition: width 0.4s linear; }
+  .searchbar:hover > .searchbar__btn {
+    background: white;
+    color: #2f5aa5; } }
+
+/*section-banner: banner con fondo completo de imagen - primer banner de todas las secciones */
+.section-banner {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  padding: 0 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start; }
+
+.banner-index1 {
+  background-image: url("../media/img-banner-index1.jpg"); }
+
+.banner-index2 {
+  background-image: url("../media/img-banner-index2.jpg"); }
+
+.banner-tours {
+  background-image: url("../media/img-banner-tours.jpg"); }
+
+.banner-reservar {
+  background-image: url("../media/img-banner-reservar.jpg"); }
+
+.banner-blog {
+  background-image: url("../media/img-banner-blog.jpg"); }
+
+.banner-contacto {
+  background-image: url("../media/img-banner-contacto.jpg"); }
+
+.card-title {
+  color: #2f5aa5;
+  padding: 10px 0px 5px 0;
+  font-weight: bold;
+  font-size: 1.2rem; }
+
+.card__body__btn {
+  color: #2f5aa5;
+  visibility: hidden;
+  font-weight: 500;
+  border: 1px solid #2f5aa5;
+  border-radius: 25px;
+  padding: 5px 10px;
+  transition: all .3s ease-in-out; }
+  .card__body__btn:hover {
+    color: white;
+    background-color: #2f5aa5;
+    border: 1px solid transparent; }
+
+/*Carousel de bootstrap: modif estilos con clases que vienen de bootstrap*/
+.carousel {
+  height: auto;
+  min-height: 470px; }
+  .carousel .carousel-indicators button {
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    background-color: #2167e0; }
+    .carousel .carousel-indicators button:focus {
+      background-color: #013287; }
+  .carousel .carousel-indicators .active {
+    background-color: #013287; }
+  .carousel-control-prev, .carousel-control-next {
+    width: 10%;
+    max-width: 50px;
+    min-width: 10px;
+    background-color: transparent; }
+  .carousel-inner {
+    margin: auto;
+    width: 90%; }
+
+/*Carousel de bootstrap: modif estilos con clases propias*/
+.c-cards {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 5px 10px; }
+  .c-cards .c-card:nth-child(even) {
+    display: none; }
+
+.c-card {
+  width: 100%;
+  margin: 10px;
+  border-radius: 25px;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.17);
+  overflow: hidden;
+  background-color: #fdfdfd;
+  text-align: center;
+  position: relative; }
+  .c-card__img-box {
+    width: 100%;
+    height: 61vh;
+    min-height: 380px;
+    margin: auto;
+    overflow: hidden;
+    position: relative; }
+    .c-card__img-box img {
+      border-radius: 25px 25px 0px 0px;
+      width: 100%;
+      height: calc(100% - 75px);
+      object-fit: cover;
+      transition: all .3s ease-in-out; }
+  .c-card__body {
+    width: 100%;
+    height: 17%;
+    background-color: #fdfdfd;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    position: absolute;
+    bottom: 7px;
+    transition: all .3s ease-in-out; }
+    .c-card__body__icons {
+      display: flex;
+      justify-content: center;
+      width: 100%; }
+      .c-card__body__icons p {
+        padding: 5px 3px;
+        font-weight: 300;
+        color: #424242;
+        font-size: .8rem; }
+  .c-card:hover .c-card__img-box img {
+    scale: 1.1;
+    filter: brightness(80%); }
+  .c-card:hover .c-card__body {
+    height: 32%; }
+  .c-card:hover .card__body__btn {
+    visibility: visible; }
+
+@media (min-width: 700px) {
+  .carousel {
+    height: 80vh;
+    display: flex;
+    align-items: center; }
+  .c-card {
+    width: 50%; }
+  .c-cards .c-card:nth-child(even) {
+    display: block; } }
+
+/*PÁGINA 1: INDEX. Animación del título "Buenos Aires es..." */
+.tiping-animation::before {
+  content: "";
+  animation: tipeado 17s infinite; }
+
+@keyframes tipeado {
+  0%, 15.8% {
+    content: ""; }
+  0.8%, 15.3% {
+    content: "p"; }
+  1.6%, 14.8% {
+    content: "pa"; }
+  2.4%, 14.3% {
+    content: "pas"; }
+  3.2%, 13.8% {
+    content: "pasi"; }
+  4.0%, 13.3% {
+    content: "pasió"; }
+  4.8%, 12.8% {
+    content: "pasión"; }
+  18.3%, 35.4% {
+    content: ""; }
+  19.1%, 34.9% {
+    content: "c"; }
+  19.9%, 34.4% {
+    content: "cu"; }
+  20.7%, 33.9% {
+    content: "cul"; }
+  21.5%, 33.4% {
+    content: "cult"; }
+  22.3%, 32.9% {
+    content: "cultu"; }
+  23.1%, 32.4% {
+    content: "cultur"; }
+  23.9%, 31.9% {
+    content: "cultura"; }
+  37.4%, 51.9% {
+    content: ""; }
+  38.2%, 51.4% {
+    content: "t"; }
+  39.0%, 50.9% {
+    content: "ta"; }
+  39.8%, 50.4% {
+    content: "tan"; }
+  40.6%, 49.9% {
+    content: "tang"; }
+  41.4%, 49.4% {
+    content: "tango"; }
+  54.9%, 76.7% {
+    content: ""; }
+  55.65%, 76.2% {
+    content: "g"; }
+  56.4%, 75.7% {
+    content: "ga"; }
+  57.15%, 75.2% {
+    content: "gas"; }
+  57.9%, 74.7% {
+    content: "gast"; }
+  58.65%, 74.2% {
+    content: "gastr"; }
+  59.4%, 73.7% {
+    content: "gastro"; }
+  60.15%, 73.2% {
+    content: "gastron"; }
+  60.9%, 72.7% {
+    content: "gastrono"; }
+  61.65%, 72.2% {
+    content: "gastronom"; }
+  62.4%, 71.7% {
+    content: "gastronomí"; }
+  63.15%, 71.2% {
+    content: "gastronomía"; }
+  76.7%, 99.7% {
+    content: ""; }
+  77.45%, 99.2% {
+    content: "a"; }
+  78.2%, 98.7% {
+    content: "ar"; }
+  78.95%, 98.2% {
+    content: "arq"; }
+  79.7%, 97.7% {
+    content: "arqu"; }
+  80.45%, 97.2% {
+    content: "arqui"; }
+  81.2%, 96.7% {
+    content: "arquit"; }
+  81.95%, 96.2% {
+    content: "arquite"; }
+  82.7%, 95.7% {
+    content: "arquitec"; }
+  83.45%, 95.2% {
+    content: "arquitect"; }
+  84.2%, 94.7% {
+    content: "arquitectu"; }
+  84.95%, 94.2% {
+    content: "arquitectur"; }
+  85.7%, 93.7% {
+    content: "arquitectura"; } }
+
+.tiping-animation::after {
+  content: "";
+  border-right: 1px solid;
+  animation: cursor 0.5s linear infinite; }
+
+@keyframes cursor {
+  0%, 100% {
+    opacity: 1; }
+  50% {
+    opacity: 0; } }
+
+/*PÁGINA 1: INDEX - Sección "SectionB" (por qué elegirnos y clientes)*/
+.section-items {
+  background-color: #f6f6f6; }
+
+.items {
+  align-items: start;
+  justify-content: center;
+  margin: auto; }
+  .items__article {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0px 35px; }
+    .items__article__img {
+      border-radius: 100%;
+      width: 150px;
+      margin-top: 20px;
+      box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.171); }
+      .items__article__img:hover {
+        transform: translate(0px, -12px);
+        transition: .3s ease-in-out; }
+    .items__article__p {
+      color: #272727;
+      font-size: 1.0rem;
+      font-weight: 300;
+      text-align: justify;
+      padding-top: 10px; }
+
+/*PÁGINA 1: INDEX - Sección "SectionC" (Carrousel)*/
+.section-carousel {
+  background-color: #e1e9f7;
+  height: auto;
+  justify-content: center;
+  align-items: center;
+  align-content: center; }
+  .section-carousel__header__text {
+    font-size: 1.10rem;
+    font-weight: 300; }
+  .section-carousel__header__btn {
+    color: #2f5aa5;
+    font-weight: bold;
+    background-color: transparent;
+    border: 2px solid #2f5aa5;
+    border-radius: 40px;
+    margin: 10px 0 0 0; }
+    .section-carousel__header__btn:hover {
+      color: white;
+      background-color: #2f5aa5;
+      border: 2px solid transparent;
+      transition: 0.2s; }
+
+/*PÁGINA 2: NUESTROS TOURS*/
+.tours-flex {
+  display: grid;
+  margin: auto;
+  padding: 25px;
+  width: 90vw;
+  column-gap: 25px;
+  row-gap: 14px;
+  grid-template: "flextours_text" auto "card0" 440px / auto; }
+  .tours-flex__container {
+    grid-area: flextours_text;
+    text-align: justify; }
+    .tours-flex__container__text, .tours-gral__container__text {
+      color: #151515;
+      font-size: 1.1rem;
+      line-height: 1.5;
+      font-weight: 300; }
+
+.tours-gral {
+  margin-top: 40px;
+  padding: 40px 0px; }
+  .tours-gral__container {
+    width: 90%;
+    text-align: center;
+    margin: auto; }
+
+.card0 {
+  grid-area: card0;
+  min-width: 220px; }
+
+.g-card {
+  border-radius: 25px;
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
+  transition: all .3s ease-in-out; }
+
+.g-cards {
+  display: grid;
+  margin: auto;
+  padding: 25px;
+  width: 90vw;
+  column-gap: 25px;
+  row-gap: 40px;
+  grid-template: "card1" 380px "card2" 380px "card3" 380px "card4" 380px "card5" 380px "card6" 380px / auto; }
+
+@media (min-width: 700px) {
+  .tours-flex {
+    grid-template: "flextours_text card0" 530px / 2fr 2fr;
+    padding: 50px 20px 20px 20px; }
+  .tours {
+    background-image: url("../media/fondo-md-nuestrostours.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%; }
+  .g-cards {
+    min-width: 550px;
+    grid-template: "card1 card2" 330px "card4 card2" 100px "card4 card3" 330px "card6 card5" 330px ". card5" 100px / auto auto; }
+  .g-card__body__overlay {
+    font-size: .9rem; }
+  .g-card:hover .card-title-big {
+    top: 17%; } }
+
+@media (min-width: 992px) {
+  .tours {
+    background-image: url("../media/fondo-lg-nuestrostours.png"); }
+  .tours-flex {
+    grid-template: "flextours_text card0" 530px / 4fr 3fr;
+    width: 70%; }
+  .tours-flex__container {
+    width: 80%; }
+  .g-cards {
+    width: 75vw;
+    min-width: 900px;
+    grid-template: "card1 card2 card3" 330px "card4 card2 card5" 100px "card4 card6 card5" 330px / auto auto auto; } }

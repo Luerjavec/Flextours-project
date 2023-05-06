@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="tours, citytours, tips de viaje, información turística, Buenos Aires">
+    <meta name="description"
+        content="Encuentra los mejores tips de viaje y toda la información turística que necesitas para tu viaje en Buenos Aires en el blog de Flextours. Descubre los lugares más destacados y actividades imperdibles de la ciudad">
+    <!-- iconos de fontawesome -->
+    <script src="https://kit.fontawesome.com/b8e046c231.js" crossorigin="anonymous"></script>
+    <!-- framework bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <!-- librería onscroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- mis estilos CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+    <title>Blog de viajes en Buenos Aires | Flextours </title>
+    <link rel="shortcut icon" href="../media/favicon-flextours.png">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+
+        <!-- Navbar de bootstrap offcanvas-->
+        <nav class="navbar navbar-expand-lg container-fluid position-absolute top-0 p-3 ">
+            <a class="navbar-brand" href="../index.html"><img class="logo my-3" src="../media/logo.png"
+                    alt="Logo Flextours"></a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
+                aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header text-white">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menú</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <!-- Navigation links -->
+                    <ul class="navbar-nav mx-auto d-flex justify-content-around align-items-center">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/nuestros-tours.html">Nuestros tours</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/reservar.html">Reservar</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" aria-current="Blog" href="../pages/blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+
+                    <!-- Search box -->
+                    <div class="d-flex justify-content-center">
+                        <form class="searchbar">
+                            <input class="searchbar__input" type="text" name="search" placeholder="Buscar...">
+                            <button type="submit" class="searchbar__btn">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main-blog">
+        <!-- Primera sección - Tipo: sección A (fondo completo imagen)-->
+        <section class="section-banner banner-blog container-fluid vh-100">
+            <h1 class="title-big">Flexblog <span class="title-colored">BA</span></h1>
+            <h2 class="subtitle-big">Descubrí lo que la ciudad tiene para ofrecer en nuestro blog</h2>
+            <a class="btn btn-big" href="#blog"><i class="fa-solid fa-arrow-down px-1"></i></a>
+        </section>
+
+        <!-- Secciones del blog -->
+        <h3 class="title-small" id="blog">Nuestro Blog</h3>
+        <div class="blog-grid">
+            <article class="blog-article">
+                <div class="blog-article__img-box">
+                    <img src="../media/blogtango.jpg" alt="personas bailando tango">
+                </div>
+                <div class="blog-article__body">
+                    <h5 class="card-title">El tango</h5>
+                    <p class="blog-article__body__text">Sin duda, el tango es uno de los íconos culturales de Buenos Aires. En esta
+                        entrada conocerás su origen,
+                        su evolución a lo largo del tiempo, las milongas más famosas de la ciudad, y cómo se puede
+                        experimentar y disfrutar esta expresión artística en un tour.</p>
+                    <a class="blog-article__body__btn" href="#">+ Leer el artículo</a>
+                </div>
+            </article>
+            <article class="blog-article">
+                <div class="blog-article__img-box">
+                    <img src="../media/blogmuseos.jpg" alt="museo de buenos aires">
+                </div>
+                <div class="blog-article__body">
+                    <h5 class="card-title">Cultura en la ciudad</h5>
+                    <p class="blog-article__body__text">En Buenos Aires hay una gran cantidad de museos,
+                        como el MALBA, el Museo Evita y el Museo de Arte Moderno,
+                        entre otros. En esta entrada hablamos sobre cuáles son los más destacados y qué exposiciones o
+                        colecciones son imperdibles.</p>
+                    <a class="blog-article__body__btn" href="#">+ Leer el artículo</a>
+                </div>
+            </article>
+            <article class="blog-article">
+                <div class="blog-article__img-box">
+                    <img src="../media/bloggastronomia.jpg" alt="gastronomía porteña">
+                </div>
+                <div class="blog-article__body">
+                    <h5 class="card-title">Sabores porteños</h5>
+                    <p class="blog-article__body__text">Buenos Aires es famosa por su deliciosa comida, desde las empanadas hasta el
+                        asado, el mate y los alfajores. En esta entrada conocerás los platos y bebidas
+                        típicos, los mejores lugares para probarlos y cómo incluirlos en un tour gastronómico.</p>
+                    <a class="blog-article__body__btn" href="#">+ Leer el artículo</a>
+                </div>
+            </article>
+            <article class="blog-article">
+                <div class="blog-article__img-box">
+                    <img src="../media/blogplazas.jpg" alt="palermo panorámico">
+                </div>
+                <div class="blog-article__body">
+                    <h5 class="card-title">El verde en la ciudad</h5>
+                    <p class="blog-article__body__text">Buenos Aires cuenta con una gran cantidad de parques y plazas, que son ideales
+                        para disfrutar de un día al aire libre. Aquí destacamos los espacios verdes más bonitos y cuáles
+                        son las actividades que se pueden hacer en cada uno de ellos.</p>
+                    <a class="blog-article__body__btn" href="#">+ Leer el artículo</a>
+                </div>
+            </article>
+            <article class="blog-article">
+                <div class="blog-article__img-box">
+                    <img src="../media/blogarquitectura.jpg" alt="edificio buenos aires arquitectura">
+                </div>
+                <div class="blog-article__body">
+                    <h5 class="card-title">La arquitectura porteña</h5>
+                    <p class="blog-article__body__text">Buenos Aires tiene una arquitectura muy rica y variada, que va desde el estilo
+                        colonial hasta el art nouveau. Descubrí los edificios y monumentos más
+                        representativos de la ciudad, y cómo se pueden incluir en un tour temático sobre arquitectura.
+                    </p>
+                    <a class="blog-article__body__btn" href="#">+ Leer el artículo</a>
+                </div>
+            </article>
+            <article class="blog-article">
+                <div class="blog-article__img-box">
+                    <img src="../media/blogstreetart.jpg" alt="arte urbano en buenos aires">
+                </div>
+                <div class="blog-article__body">
+                    <h5 class="card-title">El streetart en Buenos Aires</h5>
+                    <p class="blog-article__body__text">Buenos Aires cuenta con varios lugares emblemáticos para ver street art, como
+                        el barrio de Palermo, el barrio de San Telmo y el barrio de La Boca. En estos barrios, es
+                        posible encontrar murales y grafitis de algunos de los artistas más destacados de la ciudad y
+                        del mundo.
+                    </p>
+                    <a class="blog-article__body__btn" href="#">+ Leer el artículo</a>
+                </div>
+        </div>
+        </article>
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer row mx-auto p-3">
+        <div class="col-lg-8 mx-lg-3">
+            <h4 class="footer__title">Sobre nosotros</h4>
+            <p class="footer__text">En Flextours, somos un pequeño equipo de entusiastas de Buenos Aires que queremos mostrarte la ciudad
+                desde una perspectiva local. Ofrecemos citytours privados y personalizados para que puedas disfrutar de
+                la ciudad a tu ritmo y de acuerdo a tus preferencias. Con nosotros, tendrás una experiencia auténtica,
+                cálida y cercana, en la que te sentirás como en casa.</p>
+        </div>
+        <div class="col-lg-3 mx-lg-3">
+            <h4 class="footer__title">Encontranos en redes</h4>
+            <ul class="px-2 d-flex flex-lg-column justify-items-center">
+                <li class="mx-2 mx-lg-0">
+                    <a class="footer__link" href="https://www.facebook.com/groups/843790682714902" target="_blank">
+                        <i class="fa-brands fa-facebook"></i> Facebook </a>
+                </li>
+                <li class="mx-2 mx-lg-0">
+                    <a class="footer__link" href="https://www.instagram.com/flextours.argentina/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i> Instagram </a>
+                </li>
+                <li class="mx-2 mx-lg-0">
+                    <a class="footer__link" href="https://twitter.com/FlexTours2" target="_blank">
+                        <i class="fa-brands fa-twitter"></i> Twitter </a>
+                </li>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
