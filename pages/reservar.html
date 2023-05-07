@@ -89,86 +89,86 @@
         </section>
 
         <!-- Formulario para reservar de bootstrap-->
-        <div class="formulario row w-100 justify-content-center pt-4 pb-4" id="formulario">
-            <h3 class="title-small">Completá para reservar:</h3>
-            <form class="pt-3 col-10 col-md-5">
-                <div class="mb-3">
-                    <label class="form-label" for="nombre">Nombre y apellido</label>
-                    <input class="form-control" id="nombre" type="nombre" name="nombre"
-                        aria-describedby="nombre y apellido" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="email">Mail</label>
-                    <input class="form-control" id="email" type="email" name="mail" aria-describedby="Email" required>
-                </div>
-                <div class="mb-3">
-                    <label class="form-label" for="fecha">Fecha</label>
-                    <input class="form-control" id="fecha" type="date" name="fecha" required></input>
-                </div>
-                <div class="mb-3 mt-3">
-                    <legend class="form-label">Tipo de tour a realizar</legend>
-                    <div class="tour-type row">
-                        <div class="tour-type__option tour-flex col-6">
-                            <input class="tour-type__option__input" type="radio" id="radio1"
-                                name="tour-type" value="Tour flex" required>
-                            <label class="tour-type__option__label" for="radio1">Tour flex</label>
-                            <div class="tour-type__option__subform mb-3">
-                                <legend class="form-label text-center">Elegí los puntos a recorrer</legend>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check1" value="congreso">
-                                    <label class="form-check-label" for="check1">Congreso</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check2" value="recoleta">
-                                    <label class="form-check-label" for="check2">Recoleta</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check3" value="palermo">
-                                    <label class="form-check-label" for="check3">Palermo</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check4" value="san telmo">
-                                    <label class="form-check-label" for="check4">San telmo</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check5" value="la boca">
-                                    <label class="form-check-label" for="check5">La boca</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check6" value="tigre">
-                                    <label class="form-check-label" for="check6">Tigre</label>
-                                </div>
-                                <div class="form-check">
-                                    <input type="checkbox" class="form-check-input" id="check7" value="otros">
-                                    <label class="form-check-label" for="check7">Otros</label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="tour-type__option tour-pre col-6">
-                            <input class="tour-type__option__input" type="radio" id="radio2"
-                                name="tour-type" value="Tour pre" required>
-                            <label class="tour-type__option__label" for="radio2">Tour prearmado</label>
-                            <div class="tour-type__option__subform mb-3">
-                                <label class="form-label text-center" for="tour">Elegí el tour</label>
-                                <select class=" form-control" id="tour" name="tour">
-                                    <option value="tour-clasico">Citytour clásico</option>
-                                    <option value="tour-norte">Citytour BA norte</option>
-                                    <option value="tour-sur">Citytour BA sur</option>
-                                    <option value="tour-tango">Circuito orígenes del tango</option>
-                                    <option value="tour-tigre">Citytour clásico + Delta del Paraná</option>
-                                    <option value="tour-futbol">Circuito pasión por el fútbol</option>
-                                </select>
-                            </div>
-                        </div>
-
+        <section class="section-formulario">
+            <div class="row w-100 justify-content-center pt-4 pb-4" id="formulario">
+                <h3 class="title-small">Completá para reservar:</h3>
+                <form class="pt-3 col-10 col-md-5">
+                    <div class="mb-3">
+                        <label class="form-label" for="nombre">Nombre y apellido</label>
+                        <input class="form-control" id="nombre" type="nombre" name="nombre"
+                            aria-describedby="nombre y apellido" required>
                     </div>
-                </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="email">Mail</label>
+                        <input class="form-control" id="email" type="email" name="mail" aria-describedby="Email"
+                            required>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="fecha">Fecha</label>
+                        <input class="form-control" id="fecha" type="date" name="fecha" required></input>
+                    </div>
+                    <div class="mb-3 mt-3">
+                        <legend class="form-label">Tipo de tour a realizar</legend>
+                        <div class="tour-type row">
+                            <div class="tour-flex tour-type__option col-6">
+                                <input class="tour-type__option__input" type="radio" id="radio1" name="tour-type"
+                                    value="Tour flex" required>
+                                <label class="tour-type__option__label" for="radio1">Tour flex</label>
+                                <div class="tour-type__option__subform mb-3">
+                                    <legend class="form-label text-center">Elegí los puntos a recorrer</legend>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check1" value="congreso">
+                                        <label class="form-check-label" for="check1">Congreso</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check2" value="recoleta">
+                                        <label class="form-check-label" for="check2">Recoleta</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check3" value="palermo">
+                                        <label class="form-check-label" for="check3">Palermo</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check4" value="san telmo">
+                                        <label class="form-check-label" for="check4">San telmo</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check5" value="la boca">
+                                        <label class="form-check-label" for="check5">La boca</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check6" value="tigre">
+                                        <label class="form-check-label" for="check6">Tigre</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" class="form-check-input" id="check7" value="otros">
+                                        <label class="form-check-label" for="check7">Otros</label>
+                                    </div>
+                                </div>
+                            </div>
 
+                            <div class="tour-type__option tour-pre col-6">
+                                <input class="tour-type__option__input" type="radio" id="radio2" name="tour-type"
+                                    value="Tour pre" required>
+                                <label class="tour-type__option__label" for="radio2">Tour prearmado</label>
+                                <div class="tour-type__option__subform mb-3">
+                                    <label class="form-label text-center" for="tour">Elegí el tour</label>
+                                    <select class=" form-control" id="tour" name="tour">
+                                        <option value="tour-clasico">Citytour clásico</option>
+                                        <option value="tour-norte">Citytour BA norte</option>
+                                        <option value="tour-sur">Citytour BA sur</option>
+                                        <option value="tour-tango">Circuito orígenes del tango</option>
+                                        <option value="tour-tigre">Citytour clásico + Delta del Paraná</option>
+                                        <option value="tour-futbol">Circuito pasión por el fútbol</option>
+                                    </select>
+                                </div>
+                            </div>
 
-                <button type="submit" class="btn btn-form w-100">Reservar</button>
-            </form>
-        </div>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn btn-form w-100">Reservar</button>
+                </form>
+            </div>
         </section>
     </main>
 

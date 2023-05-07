@@ -69,10 +69,10 @@
     50% { opacity: 0; }
 }
 
-/*PÁGINA 1: INDEX - Sección "SectionB" (por qué elegirnos y clientes)*/
+/*PÁGINA 1: INDEX - sección con 3 items (por qué elegirnos y clientes)*/
 
 .section-items {
-    background-color: #f6f6f6;
+    background-color: map-get($colors, "offwhite");
 }
 
 .items {
@@ -81,10 +81,7 @@
     margin: auto;
     
     &__article {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        @include flex (column, center, center);
         text-align: center;
         padding: 0px 35px;
 
@@ -92,7 +89,7 @@
             border-radius: 100%;
             width: 150px;
             margin-top: 20px;
-            box-shadow: 0px 5px 25px rgba(0, 0, 0, 0.171);
+            box-shadow: 0px 5px 25px #0000002c;
 
             &:hover{
                 transform: translate(0px, -12px);
@@ -101,19 +98,17 @@
         }
 
         &__p{
-            color: #272727;
-            font-size: 1.0rem;
-            font-weight: 300;
+            @include gral_text;
             text-align: justify;
             padding-top: 10px;
         }
     }
 }
 
-/*PÁGINA 1: INDEX - Sección "SectionC" (Carrousel)*/
+/*PÁGINA 1: INDEX - sección del carousel */
 
 .section-carousel {
-    background-color: #e1e9f7;
+    background-color: map-get($colors, "lightblue");
     height: auto;
     justify-content: center;
     align-items: center;
@@ -121,24 +116,14 @@
 
     &__header   {
         &__text {
-        font-size: 1.10rem;
-        font-weight: 300;
+        @include gral_text ($textalign: center);
         }
 
         &__btn {
-            color: #2f5aa5;
-            font-weight: bold;
-            background-color: transparent;
-            border: 2px solid #2f5aa5;
-            border-radius: 40px;
+            @include font (map-get($colors, "trueblue"), 1.10rem, bold);
+            @include button (map-get($colors, "trueblue"), transparent);
             margin: 10px 0 0 0;
-
-            &:hover {
-                color: white;
-                background-color: #2f5aa5;
-                border: 2px solid transparent;
-                transition: 0.2s;
-            }
+            transition: 0.2s;
         }
     }
 }

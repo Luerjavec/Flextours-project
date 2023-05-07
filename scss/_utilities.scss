@@ -1,7 +1,4 @@
-//fonts
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&display=swap');
-
-//variables y mapas
+//variables y mapas map-get($colors, "offblack");
 $colors: (
     "trueblue": #2f5aa5,
     "lightsalmon": #E8B7A6,
@@ -9,7 +6,7 @@ $colors: (
     "deepsalmon": #e56e46,
     "lightblue": #e1e9f7,
     "offwhite": #f6f6f6,
-    "offblack": #343434
+    "offblack": #282828,
 );
 
 $font1: ‘Roboto’, sans-serif;
@@ -20,3 +17,55 @@ $text-l: 2.2rem;
 $text-m: 1.4rem;
 $text-s: 1.1rem;
 $text-sm: 0.9rem;
+
+//mixins
+
+@mixin tablet {
+    @media (min-width: 700px) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: 992px) {
+        @content;
+    }
+}
+
+@mixin box ($width, $height: $width) {
+    width: $width;
+    height: $height;
+}
+
+@mixin flex ($direction: null, $justify: null, $align: null) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+}
+
+@mixin font ($color, $size, $weight) {
+    color: $color;
+    font-size: $size;
+    font-weight: $weight;
+}
+
+@mixin gral_text ($size: #{$text-s}, $weight: 300, $textalign: justify) {
+    color: map-get($colors, "offblack");
+    font-size: $size;
+    font-weight: $weight;
+    line-height: 1.5;
+    text-align: $textalign;
+}
+
+@mixin button ($bordercolor, $bgcolor: transparent, $hovercolor: map-get($colors, "offwhite"), $radius: 25px) {
+    color: $bordercolor;
+    background-color: $bgcolor;
+    border: 2px solid $bordercolor;
+    border-radius: $radius; 
+    &:hover {
+        color: $hovercolor;
+        background-color: $bordercolor;
+        border: 2px solid transparent;
+    }
+}

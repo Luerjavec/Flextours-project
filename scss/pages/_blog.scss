@@ -1,0 +1,71 @@
+/*PÁGINA 4: BLOG*/
+
+.main-blog{
+    background-color: map-get($colors, "offwhite");
+
+    & .title-small {
+    padding-top: 40px;
+    }
+}
+
+.blog-grid {
+    display: grid;
+    gap: 35px;
+    margin: auto;
+    padding: 20px 5px 70px 5px;
+    grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+    width: 95%;
+
+    @include tablet {
+        padding: 35px 100px 80px 100px;
+    }
+}
+
+.blog-article {
+    @include flex (column, end, null);
+    overflow: hidden;
+    border-radius: 25px;
+    height: 450px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
+    border-radius: 25px;
+    background-size: cover;
+    background-position: center;
+    transition: translate .3s;
+
+    &:hover {
+        translate: 0px -20px;
+    }
+
+    &__img-box {
+        position: relative;
+        @include box (100%);
+
+        & img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    &__body {
+        padding: 20px;
+
+        &__text {
+            text-align: justify;
+            @include gral_text (1rem);
+
+        }
+
+        &__btn {
+            @include font (map-get($colors, "deepsalmon"), null, 700);
+            transition: color .3s;
+
+            &:hover {
+                color: map-get($colors, "trueblue");
+            }
+        }
+    }
+}

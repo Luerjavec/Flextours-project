@@ -1,18 +1,21 @@
 // Reset and utilities (variables, mixins and maps)
-@import "utilities";
+
 @import "reset";
+@import "utilities";
 
 // Components
-@import "components/titles&buttons";
 @import "components/header&footer";
-@import "components/banners";
-@import "components/cards";
-@import "components/gridofcards";
-@import "components/carousel";
+@import "components/titles-buttons-banners-cards";
 
 // pages
 @import "pages/index";
-@import "pages/nuestrostours";
-@import "pages/contacto&reservas";
-@import "pages/blog";
+    // Componente del index:
+    @import "components/carousel";
 
+@import "pages/nuestrostours";
+    // Componente de nuestros tours:
+    @import "components/gridofcards";
+
+@import "pages/contacto&reservas";
+
+@import "pages/blog";

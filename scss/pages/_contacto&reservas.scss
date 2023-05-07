@@ -1,118 +1,124 @@
 /*PÁGINA 3 y 5: RESERVAR y CONTACTO*/
 
-.formulario{
-    background-color:#fff1ec1c;
-}
-
-.contact-box {
-    position: relative;
-    margin: 30px 0px;
-}
-
-.contact-box__label {
-    position: absolute;
-    top: 8px;
-    left: 5px;
-    padding: 0px 10px;
-    transition: all .3s ease-in-out;
-    height:min-content;
-    color:#003899;
-    font-size: 1rem;
+.section-formulario{
+    background-color: map-get($colors, "offwhite");
 }
 
 .form-label {
-    height:min-content;
-    color:#003899;
-    font-size: 1rem;
+    @include font (map-get($colors, "trueblue"), 1rem, null);
+    height: min-content;
 }
 
-.contact-box__input::placeholder {
-    visibility: hidden;
-}
+.btn-form {
+    @include font (map-get($colors, "offwhite"), 1.1rem, null);
+    background-color: map-get($colors, "truesalmon");
 
-.contact-box__input:focus + .contact-box__label, .contact-box__input:valid + .contact-box__label{
-    top: -16px;
-    font-size: .8rem;
-    background: white;
-}
-
-
-.tour-type {
-    margin: 10px 0px;
-    padding: 10px 0px 0px 0px;
-}
-
-.tour-type__option {
-    padding: 10px 0px 0px 0px;
-    display: flex;
-    flex-direction: column;
+    &:hover {
+        color: map-get($colors, "offwhite");
+        background-color: map-get($colors, "trueblue");
+    }
 }
 
 input[type="radio"]{
     display: none;
 }
 
-.tour-type__option__label {
-    padding: 6px 20px;
-    border: 2px solid white;
-    background-color:rgb(231, 230, 230);
-    color: rgb(74, 74, 74);
-    text-align: center;
-}
+/*formulario de contacto*/
 
-.tour-flex .tour-type__option__label {
-    border-radius: 25px 0 0 25px;
-}
+.contact-box {
+    position: relative;
+    margin: 30px 0px;
 
-.tour-pre .tour-type__option__label {
-    border-radius: 0 25px 25px 0;
-}
+    &__label {
+        position: absolute;
+        top: 8px;
+        left: 5px;
+        padding: 0px 10px;
+        transition: all .3s ease-in-out;
+        height: min-content;
+        @include font (map-get($colors, "trueblue"), 1rem, null);
+    }
 
-.tour-type__option__input:checked + .tour-type__option__label {
-    background-color:#134bad;
-    color: white;
-}
+    &__input{
+        &::placeholder {
+            visibility: hidden;
+        }
+        &:focus + .contact-box__label, &:valid + .contact-box__label {
+            top: -16px;
+            font-size: .8rem;
+            background: map-get($colors, "offwhite");
+        }
 
-.tour-type__option__input:not(:checked) ~ .tour-type__option__subform {
-    opacity: 0%;
-    padding: 0;
-    height: 0px;
-}
-
-.tour-type__option__input:checked ~ .tour-type__option__subform {
-    opacity: 100%;
-    height: auto;
-}
-
-.tour-type__option__subform{
-    padding: 25px 0px 10px 0px;
-    transition: opacity .2s;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.tour-type__option__subform .form-label {
-    color:#e56e46;
-}
-
-.tour-type__option__subform .form-check{
-    margin: 10px 5px;
-}
-
-
-.btn-form {
-    color:white;
-    font-size: 1.1rem;
-    background-color: #db967f; 
-}
-
-.btn-form:hover {
-    color:white;
-    background-color:#013287;
+    }
 }
 
 .contact-map iframe {
-    width: 90%;
-    height: 90%;
+    @include box (90%);
     min-height: 500px;
+}
+
+/*formulario de reservas*/
+
+.tour-type {
+    margin: 10px 0px;
+    padding: 10px 0px 0px 0px;
+
+    &__option {
+        padding: 10px 0px 0px 0px;
+        @include flex (column, null, null);
+
+        &__label {
+            padding: 6px 20px;
+            border: 2px solid map-get($colors, "offwhite");
+            background-color:#d4d4d4;
+            color: #4a4a4a;
+            text-align: center;
+        }
+
+        &__input {
+            &:checked {
+                & + .tour-type__option__label {
+                    background-color: map-get($colors, "trueblue");
+                    color: map-get($colors, "offwhite");
+                }
+
+                & ~ .tour-type__option__subform {
+                    opacity: 100%;
+                    height: auto;
+                }
+            }
+
+            &:not(:checked) {
+                & ~ .tour-type__option__subform {
+                    opacity: 0%;
+                    padding: 0;
+                    height: 0px;
+                }
+
+            }
+        }
+
+        &__subform {
+            padding: 25px 0px 10px 0px;
+            transition: opacity .2s;
+            display: flex;
+            flex-wrap: wrap;
+
+            & .form-label {
+                color: map-get($colors, "deepsalmon");
+            }
+
+            & .form-check {
+                margin: 10px 5px;
+            }
+        }
+    }
+}
+
+.tour-flex > .tour-type__option__label {
+    border-radius: 25px 0 0 25px;
+}
+
+.tour-pre > .tour-type__option__label {
+    border-radius: 0 25px 25px 0;
 }

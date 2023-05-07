@@ -1,0 +1,101 @@
+/*Títulos y botones para todas las páginas */
+
+.title-big {
+    @include font (map-get($colors, "offwhite"), 3.3rem, 500);
+    padding: 10px 0px;
+    animation: fadein 1s ease-in-out;
+}
+
+.title-small {
+    @include font (map-get($colors, "trueblue"), 2.2rem, 500);
+    margin: 0 auto 35px auto;
+    padding: 5px 0px;
+    position: relative;
+    text-align: center;
+    transition: color .2s;
+
+    &::after {
+        content:"";
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: -10px;
+        margin: auto;
+        background: map-get($colors, "truesalmon");
+        @include box (100px, 2px);
+        }
+}
+
+.subtitle-big {
+    @include font (map-get($colors, "offwhite"), 2rem, 500);
+    padding: 0px 0px 20px 0px;
+    animation: fadein 2s ease-in-out;
+}
+
+.subtitle-small {
+    @include font (map-get($colors, "trueblue"), null, 500);
+    padding-top: 30px;
+}
+
+.title-colored {
+    color: map-get($colors, "truesalmon");
+}
+
+.btn-big {
+    @include font (map-get($colors, "lightsalmon"), 1.4rem, 500);
+    @include button (map-get($colors, "lightsalmon"), transparent, map-get($colors, "trueblue"), 40px);
+    animation: fadein 2.5s ease-in-out;
+    transition: 0.2s;
+}
+
+@keyframes fadein {
+    0% { opacity: 0%; }
+    20% { opacity: 0%; }
+    100% { opacity: 100%; }
+}
+
+/*section-banner: banner con fondo completo de imagen - primer banner de todas las páginas */
+
+.section-banner {
+    @include flex (column, center, start);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 0 5vw;
+}
+
+$sections: (index1, index2, tours, reservar, blog, contacto);
+
+@each $section in $sections {
+    .banner-#{$section} {
+        background-image: url("../media/img-banner-#{$section}.jpg");
+    }
+}
+
+.banner-index2 {
+    align-items: end;
+}
+
+
+/*Cards de todas las páginas*/
+
+.c-card, .g-card {
+    @include box (100%);
+    position: relative;
+    overflow: hidden;
+    border-radius: 25px;
+    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.17);
+}
+
+.c-card__body__title, .g-card__body__title, .blog-article__body__title {
+    @include font (map-get($colors, "trueblue"), 1.2rem, bold);
+    padding: 10px 0px 5px 0;
+}
+
+.c-card__body__btn, .g-card__body__btn {
+    @include button (map-get($colors, "trueblue"), transparent);
+    visibility: hidden;
+    font-weight: 500;
+    padding: 5px 10px;
+    transition: all .3s ease-in-out;
+}

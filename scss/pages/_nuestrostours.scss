@@ -1,26 +1,68 @@
 /*PÁGINA 2: NUESTROS TOURS*/
 
-.tours-flex {
-    display: grid;
-    margin: auto;
-    padding: 25px;
-    width: 90vw;
-    column-gap: 25px;
-    row-gap: 14px;
-    grid-template:
-        "flextours_text" auto
-        "card0" 440px
-        / auto;
-    
-    &__container {
-        grid-area: flextours_text;
-        text-align: justify;
+.tours {
+    @include tablet {
+        background-image: url("../media/fondo-md-nuestrostours.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+    }
+    @include desktop {
+        background-image: url("../media/fondo-lg-nuestrostours.png");
+    }
 
-        &__text {
-            color:rgb(21, 21, 21);
-            font-size: 1.1rem;
-            line-height: 1.5;
-            font-weight: 300;
+    &-flex {
+        display: grid;
+        margin: auto;
+        padding: 25px;
+        width: 90vw;
+        column-gap: 25px;
+        row-gap: 14px;
+        grid-template:
+            "flextours_text" auto
+            "card0" 440px
+            / auto;
+    
+        &__container {
+            grid-area: flextours_text;
+            text-align: justify;
+
+            &__text {
+                @include gral_text;
+            }
+
+            @include desktop {
+                width: 80%;
+            }
+        }
+
+        @include tablet {
+            grid-template:
+                "flextours_text card0" 530px
+                / 2fr 2fr;
+            padding: 50px 20px 20px 20px;
+        }
+
+        @include desktop {
+            grid-template:
+                "flextours_text card0" 530px
+                / 4fr 3fr;
+            width: 70%;
+        }
+    }
+
+    &-gral {
+        margin-top: 40px;
+        padding: 40px 0px;
+
+        &__container {
+            width: 90%;
+            text-align: center;
+            margin: auto;
+
+            &__text {
+                @include gral_text ($textalign: center);
+            }
         }
     }
 }
@@ -28,58 +70,4 @@
 .card0 {
     grid-area: card0;
     min-width: 220px;
-}
-
-.tours-gral {
-    margin-top: 40px;
-    padding: 40px 0px;
-
-    &__container {
-        width: 90%;
-        text-align: center;
-        margin: auto;
-
-        &__text {
-            @extend .tours-flex__container__text;
-        }
-    }
-}
-
-.tours .card-title {
-    height: fit-content;
-    position: absolute;
-    top: 5%;
-    transition: all .4s ease-in-out;
-}
-
-@media (min-width: 700px) {
-    .tours-flex {
-        grid-template:
-        "flextours_text card0" 530px
-        / 2fr 2fr;
-        padding: 50px 20px 20px 20px;
-    }
-
-    .tours {
-        background-image: url("../media/fondo-md-nuestrostours.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
-    }
-}
-@media (min-width: 992px) {
-    .tours {
-        background-image: url("../media/fondo-lg-nuestrostours.png");
-    }
-    
-    .tours-flex {
-        grid-template:
-        "flextours_text card0" 530px
-        / 4fr 3fr;
-        width: 70%;
-    }
-
-    .tours-flex__container {
-        width: 80%;
-    }
 }
