@@ -25,6 +25,11 @@
     }
 }
 
+.card0 {
+    grid-area: card0;
+    min-width: 220px;
+}
+
 .tours-gral {
     margin-top: 40px;
     padding: 40px 0px;
@@ -40,35 +45,11 @@
     }
 }
 
-.card0 {
-    grid-area: card0;
-    min-width: 220px;
-}
-
-.g-card {
-    border-radius: 25px;
-    position: relative;
-    height: 100%;
-    overflow: hidden;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
-    transition: all .3s ease-in-out;
-}
-
-.g-cards {
-    display: grid;
-    margin: auto;
-    padding: 25px;
-    width: 90vw;
-    column-gap: 25px;
-    row-gap: 40px;
-    grid-template:
-        "card1" 380px
-        "card2" 380px
-        "card3" 380px
-        "card4" 380px
-        "card5" 380px
-        "card6" 380px
-        / auto;
+.tours .card-title {
+    height: fit-content;
+    position: absolute;
+    top: 5%;
+    transition: all .4s ease-in-out;
 }
 
 @media (min-width: 700px) {
@@ -85,26 +66,7 @@
         background-position: center;
         background-size: 100% 100%;
     }
-
-    .g-cards {
-        min-width: 550px; 
-        grid-template:
-            "card1 card2" 330px
-            "card4 card2" 100px
-            "card4 card3" 330px
-            "card6 card5" 330px
-                ". card5" 100px
-            / auto auto;
-    }
-    .g-card__body__overlay {
-        font-size: .9rem;
-    }
-
-    .g-card:hover .card-title-big {
-        top: 17%;
-    }
 }
-
 @media (min-width: 992px) {
     .tours {
         background-image: url("../media/fondo-lg-nuestrostours.png");
@@ -120,15 +82,4 @@
     .tours-flex__container {
         width: 80%;
     }
-
-    .g-cards {
-        width: 75vw;
-        min-width: 900px; 
-        grid-template:
-        "card1 card2 card3" 330px
-        "card4 card2 card5" 100px
-        "card4 card6 card5" 330px
-        / auto auto auto;
-    }
-
 }
