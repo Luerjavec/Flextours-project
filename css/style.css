@@ -247,98 +247,52 @@ i {
   animation: tipeado 17s infinite; }
 
 @keyframes tipeado {
-  0%, 15.8% {
-    content: ""; }
-  0.8%, 15.3% {
-    content: "p"; }
-  1.6%, 14.8% {
-    content: "pa"; }
-  2.4%, 14.3% {
-    content: "pas"; }
-  3.2%, 13.8% {
-    content: "pasi"; }
-  4.0%, 13.3% {
-    content: "pasió"; }
-  4.8%, 12.8% {
-    content: "pasión"; }
-  18.3%, 35.4% {
-    content: ""; }
-  19.1%, 34.9% {
-    content: "c"; }
-  19.9%, 34.4% {
-    content: "cu"; }
-  20.7%, 33.9% {
-    content: "cul"; }
-  21.5%, 33.4% {
-    content: "cult"; }
-  22.3%, 32.9% {
-    content: "cultu"; }
-  23.1%, 32.4% {
-    content: "cultur"; }
-  23.9%, 31.9% {
-    content: "cultura"; }
-  37.4%, 51.9% {
-    content: ""; }
-  38.2%, 51.4% {
-    content: "t"; }
-  39.0%, 50.9% {
-    content: "ta"; }
-  39.8%, 50.4% {
-    content: "tan"; }
-  40.6%, 49.9% {
-    content: "tang"; }
-  41.4%, 49.4% {
-    content: "tango"; }
-  54.9%, 76.7% {
-    content: ""; }
-  55.65%, 76.2% {
-    content: "g"; }
-  56.4%, 75.7% {
-    content: "ga"; }
-  57.15%, 75.2% {
-    content: "gas"; }
-  57.9%, 74.7% {
-    content: "gast"; }
-  58.65%, 74.2% {
-    content: "gastr"; }
-  59.4%, 73.7% {
-    content: "gastro"; }
-  60.15%, 73.2% {
-    content: "gastron"; }
-  60.9%, 72.7% {
-    content: "gastrono"; }
-  61.65%, 72.2% {
-    content: "gastronom"; }
-  62.4%, 71.7% {
-    content: "gastronomí"; }
-  63.15%, 71.2% {
-    content: "gastronomía"; }
-  76.7%, 99.7% {
-    content: ""; }
-  77.45%, 99.2% {
-    content: "a"; }
-  78.2%, 98.7% {
-    content: "ar"; }
-  78.95%, 98.2% {
-    content: "arq"; }
-  79.7%, 97.7% {
-    content: "arqu"; }
-  80.45%, 97.2% {
-    content: "arqui"; }
-  81.2%, 96.7% {
-    content: "arquit"; }
-  81.95%, 96.2% {
-    content: "arquite"; }
-  82.7%, 95.7% {
-    content: "arquitec"; }
-  83.45%, 95.2% {
-    content: "arquitect"; }
-  84.2%, 94.7% {
-    content: "arquitectu"; }
-  84.95%, 94.2% {
-    content: "arquitectur"; }
-  85.7%, 93.7% {
-    content: "arquitectura"; } }
+  0%, 15.8% {    content: ""; }
+  0.8%, 15.3% {    content: "p"; }
+  1.6%, 14.8% {    content: "pa"; }
+  2.4%, 14.3% {    content: "pas"; }
+  3.2%, 13.8% {    content: "pasi"; }
+  4.0%, 13.3% {    content: "pasió"; }
+  4.8%, 12.8% {    content: "pasión"; }
+  18.3%, 35.4% {    content: ""; }
+  19.1%, 34.9% {    content: "c"; }
+  19.9%, 34.4% {    content: "cu"; }
+  20.7%, 33.9% {    content: "cul"; }
+  21.5%, 33.4% {    content: "cult"; }
+  22.3%, 32.9% {    content: "cultu"; }
+  23.1%, 32.4% {    content: "cultur"; }
+  23.9%, 31.9% {    content: "cultura"; }
+  37.4%, 51.9% {    content: ""; }
+  38.2%, 51.4% {    content: "t"; }
+  39.0%, 50.9% {    content: "ta"; }
+  39.8%, 50.4% {    content: "tan"; }
+  40.6%, 49.9% {    content: "tang"; }
+  41.4%, 49.4% {    content: "tango"; }
+  54.9%, 76.7% {    content: ""; }
+  55.65%, 76.2% {    content: "g"; }
+  56.4%, 75.7% {    content: "ga"; }
+  57.15%, 75.2% {    content: "gas"; }
+  57.9%, 74.7% {    content: "gast"; }
+  58.65%, 74.2% {    content: "gastr"; }
+  59.4%, 73.7% {    content: "gastro"; }
+  60.15%, 73.2% {    content: "gastron"; }
+  60.9%, 72.7% {    content: "gastrono"; }
+  61.65%, 72.2% {    content: "gastronom"; }
+  62.4%, 71.7% {    content: "gastronomí"; }
+  63.15%, 71.2% {    content: "gastronomía"; }
+  76.7%, 99.7% {    content: ""; }
+  77.45%, 99.2% {    content: "a"; }
+  78.2%, 98.7% {    content: "ar"; }
+  78.95%, 98.2% {    content: "arq"; }
+  79.7%, 97.7% {    content: "arqu"; }
+  80.45%, 97.2% {    content: "arqui"; }
+  81.2%, 96.7% {    content: "arquit"; }
+  81.95%, 96.2% {    content: "arquite"; }
+  82.7%, 95.7% {    content: "arquitec"; }
+  83.45%, 95.2% {    content: "arquitect"; }
+  84.2%, 94.7% {    content: "arquitectu"; }
+  84.95%, 94.2% {    content: "arquitectur"; }
+  85.7%, 93.7% {    content: "arquitectura"; } }
 
 .tiping-animation::after {
   content: "";
@@ -346,10 +300,8 @@ i {
   animation: cursor 0.5s linear infinite; }
 
 @keyframes cursor {
-  0%, 100% {
-    opacity: 1; }
-  50% {
-    opacity: 0; } }
+  0%, 100% {    opacity: 1; }
+  50% {    opacity: 0; } }
 
 /*PÁGINA 1: INDEX - sección con 3 items (por qué elegirnos y clientes)*/
 .section-items {
@@ -515,7 +467,9 @@ i {
     width: 90vw;
     column-gap: 25px;
     row-gap: 14px;
-    grid-template: "flextours_text" auto "card0" 440px / auto; }
+    grid-template: "flextours_text" auto
+ "card0" 440px
+ / auto; }
     .tours-flex__container {
       padding-top: 30px;
       grid-area: flextours_text;
@@ -531,11 +485,13 @@ i {
           width: 80%; } }
     @media (min-width: 700px) {
       .tours-flex {
-        grid-template: "flextours_text card0" 530px / 2fr 2fr;
+        grid-template: "flextours_text card0" 530px
+ / 2fr 2fr;
         padding: 70px 20px 20px 20px; } }
     @media (min-width: 992px) {
       .tours-flex {
-        grid-template: "flextours_text card0" 530px / 4fr 3fr;
+        grid-template: "flextours_text card0" 530px
+ / 4fr 3fr;
         width: 70%; } }
   .tours-gral {
     margin-top: 40px;
@@ -563,16 +519,30 @@ i {
   width: 90vw;
   column-gap: 25px;
   row-gap: 40px;
-  grid-template: "card1" 380px "card2" 380px "card3" 380px "card4" 380px "card5" 380px "card6" 380px / auto; }
+  grid-template: "card1" 380px
+ "card2" 380px
+ "card3" 380px
+ "card4" 380px
+ "card5" 380px
+ "card6" 380px
+ / auto; }
   @media (min-width: 700px) {
     .g-cards {
       min-width: 550px;
-      grid-template: "card1 card2" 330px "card4 card2" 100px "card4 card3" 330px "card6 card5" 330px ". card5" 100px / auto auto; } }
+      grid-template: "card1 card2" 330px
+ "card4 card2" 100px
+ "card4 card3" 330px
+ "card6 card5" 330px
+ ". card5" 100px
+ / auto auto; } }
   @media (min-width: 992px) {
     .g-cards {
       width: 75vw;
       min-width: 900px;
-      grid-template: "card1 card2 card3" 330px "card4 card2 card5" 100px "card4 card6 card5" 330px / auto auto auto; } }
+      grid-template: "card1 card2 card3" 330px
+ "card4 card2 card5" 100px
+ "card4 card6 card5" 330px
+ / auto auto auto; } }
 
 .card1 {
   grid-area: card1; }
