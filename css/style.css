@@ -4,7 +4,7 @@
 * {
   margin: 0;
   padding: 0;
-  font-family: 'Roboto', sans-serif; }
+  font-family: "Nunito", sans-serif; }
 
 a {
   text-decoration: none; }
@@ -16,11 +16,12 @@ ul {
 i {
   padding: 0px 5px; }
 
-/*HEADER de todas las páginas - Elementos Offcanvas*/
+/*HEADER de todas las páginas*/
+/* Elementos Offcanvas del header*/
 .offcanvas {
   background-color: rgba(0, 0, 0, 0.83); }
 
-/*HEADER de todas las páginas - Elementos navegables*/
+/*Elementos navegables del header*/
 .navbar-toggler {
   background-color: rgba(255, 255, 255, 0.448); }
 
@@ -29,9 +30,10 @@ i {
   margin-left: 15px; }
 
 .nav-link {
-  color: #E8B7A6;
+  color: #ffc2ae;
   font-size: 1.1rem;
   font-weight: 500;
+  font-family: "Roboto", sans-serif;
   margin: 0px 12px;
   position: relative;
   transition: color .2s; }
@@ -48,12 +50,12 @@ i {
     transform: scale(0, 1);
     transform-origin: 50% 0%;
     background: #f6f6f6; }
-  .nav-link:hover {
+  .nav-link:hover, .nav-link:active {
     color: #f6f6f6; }
-  .nav-link:hover::after {
-    transform: scale(1, 1); }
+    .nav-link:hover::after, .nav-link:active::after {
+      transform: scale(1, 1); }
 
-/*HEADER - elemento de búsqueda mobile - siempre desplegado*/
+/*Elemento de búsqueda header*/
 .searchbar {
   background-color: #ffffff3e;
   border-radius: 30px;
@@ -94,10 +96,9 @@ i {
   background: #003769;
   background: linear-gradient(126deg, #003769 9%, #000069 100%); }
   .footer__title {
-    color: #E8B7A6;
-    font-size: 1.2rem;
+    color: #ffc2ae;
+    font-size: 1.1rem;
     font-weight: 500;
-    font-family: 'Nunito', sans-serif;
     padding: 10px 0px; }
   .footer__text, .footer__link {
     color: #f6f6f6;
@@ -106,15 +107,17 @@ i {
   .footer__link {
     transition: .2s; }
     .footer__link:hover {
-      color: #E8B7A6; }
+      color: #ffc2ae; }
 
-/*Títulos y botones para todas las páginas */
+/*COMPONENTES COMUNES A TODAS LAS PÁGINAS*/
+/*TÍTULOS Y BOTONES para todas las páginas */
 .title-big {
   color: #f6f6f6;
   font-size: 3.3rem;
   font-weight: 500;
   padding: 10px 0px;
-  animation: fadein 1s ease-in-out; }
+  animation: fadein 1s ease-in-out;
+  font-family: "Roboto", sans-serif; }
 
 .title-small {
   color: #2f5aa5;
@@ -124,7 +127,8 @@ i {
   padding: 5px 0px;
   position: relative;
   text-align: center;
-  transition: color .2s; }
+  transition: color .2s;
+  font-family: "Roboto", sans-serif; }
   .title-small::after {
     content: "";
     position: absolute;
@@ -138,32 +142,34 @@ i {
 
 .subtitle-big {
   color: #f6f6f6;
-  font-size: 2rem;
+  font-size: 2.2rem;
   font-weight: 500;
   padding: 0px 0px 20px 0px;
-  animation: fadein 2s ease-in-out; }
+  animation: fadein 2s ease-in-out;
+  font-family: "Roboto", sans-serif; }
 
 .subtitle-small {
   color: #2f5aa5;
   font-weight: 500;
-  padding-top: 30px; }
+  padding-top: 30px;
+  font-family: "Roboto", sans-serif; }
 
 .title-colored {
-  color: #ff9977; }
+  color: #ff9977;
+  font-family: "Roboto", sans-serif; }
 
 .btn-big {
-  color: #E8B7A6;
-  font-size: 1.4rem;
-  font-weight: 500;
-  color: #E8B7A6;
+  color: #ffc2ae;
   background-color: transparent;
-  border: 2px solid #E8B7A6;
+  border: 2px solid #ffc2ae;
   border-radius: 40px;
+  font-size: 1.4rem;
+  font-weight: bold;
   animation: fadein 2.5s ease-in-out;
   transition: 0.2s; }
   .btn-big:hover {
     color: #2f5aa5;
-    background-color: #E8B7A6;
+    background-color: #ffc2ae;
     border: 2px solid transparent; }
 
 @keyframes fadein {
@@ -174,39 +180,38 @@ i {
   100% {
     opacity: 100%; } }
 
-/*section-banner: banner con fondo completo de imagen - primer banner de todas las páginas */
+/*BANNER de todas las páginas (banner con fondo completo de imagen) */
+.full-img-bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover; }
+
 .section-banner {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: start;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
   padding: 0 5vw; }
 
 .banner-index1 {
-  background-image: url("../media/img-banner-index1.jpg"); }
+  background-image: url("../media/img-banner-index1.avif"); }
 
 .banner-index2 {
-  background-image: url("../media/img-banner-index2.jpg"); }
+  background-image: url("../media/img-banner-index2.avif"); }
 
 .banner-tours {
-  background-image: url("../media/img-banner-tours.jpg"); }
+  background-image: url("../media/img-banner-tours.avif"); }
 
 .banner-reservar {
-  background-image: url("../media/img-banner-reservar.jpg"); }
+  background-image: url("../media/img-banner-reservar.avif"); }
 
 .banner-blog {
-  background-image: url("../media/img-banner-blog.jpg"); }
+  background-image: url("../media/img-banner-blog.avif"); }
 
 .banner-contacto {
-  background-image: url("../media/img-banner-contacto.jpg"); }
+  background-image: url("../media/img-banner-contacto.avif"); }
 
-.banner-index2 {
-  align-items: end; }
-
-/*Cards de todas las páginas*/
+/*CARDS de todas las páginas*/
 .c-card, .g-card {
   width: 100%;
   height: 100%;
@@ -217,9 +222,10 @@ i {
 
 .c-card__body__title, .g-card__body__title, .blog-article__body__title {
   color: #2f5aa5;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   font-weight: bold;
-  padding: 10px 0px 5px 0; }
+  padding: 10px 0px 5px 0px;
+  font-family: "Roboto", sans-serif; }
 
 .c-card__body__btn, .g-card__body__btn {
   color: #2f5aa5;
@@ -227,7 +233,7 @@ i {
   border: 2px solid #2f5aa5;
   border-radius: 25px;
   visibility: hidden;
-  font-weight: 500;
+  font-weight: bold;
   padding: 5px 10px;
   transition: all .3s ease-in-out; }
   .c-card__body__btn:hover, .g-card__body__btn:hover {
@@ -347,11 +353,10 @@ i {
 
 /*PÁGINA 1: INDEX - sección con 3 items (por qué elegirnos y clientes)*/
 .section-items {
-  background-color: #f6f6f6; }
+  background-image: url("../media/section-items-bg.png");
+  margin: auto; }
 
 .items {
-  align-items: start;
-  justify-content: center;
   margin: auto; }
   .items__article {
     display: flex;
@@ -370,16 +375,15 @@ i {
         transition: .3s ease-in-out; }
     .items__article__p {
       color: #282828;
-      font-size: 1.1rem;
+      font-size: 1rem;
       font-weight: 300;
       line-height: 1.5;
-      text-align: justify;
       text-align: justify;
       padding-top: 10px; }
 
 /*PÁGINA 1: INDEX - sección del carousel */
 .section-carousel {
-  background-color: #e1e9f7;
+  background-image: url("../media/section-carousel-bg.png");
   height: auto;
   justify-content: center;
   align-items: center;
@@ -392,12 +396,11 @@ i {
     text-align: center; }
   .section-carousel__header__btn {
     color: #2f5aa5;
-    font-size: 1.1rem;
-    font-weight: bold;
-    color: #2f5aa5;
     background-color: transparent;
     border: 2px solid #2f5aa5;
     border-radius: 25px;
+    font-size: 1.1rem;
+    font-weight: bold;
     margin: 10px 0 0 0;
     transition: 0.2s; }
     .section-carousel__header__btn:hover {
@@ -405,19 +408,21 @@ i {
       background-color: #2f5aa5;
       border: 2px solid transparent; }
 
-/*Carousel de bootstrap: modif estilos con clases que vienen de bootstrap*/
+/*Carousel de bootstrap: modificación de estilos con clases que vienen de bootstrap*/
 .carousel {
-  height: auto;
-  min-height: 470px; }
-  .carousel .carousel-indicators button {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background-color: #2f5aa5; }
-    .carousel .carousel-indicators button:focus {
+  height: 70vh;
+  min-height: 400px; }
+  .carousel .carousel-indicators {
+    margin-top: 50px; }
+    .carousel .carousel-indicators button {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
       background-color: #2f5aa5; }
-  .carousel .carousel-indicators .active {
-    background-color: #2f5aa5; }
+      .carousel .carousel-indicators button:focus {
+        background-color: #2f5aa5; }
+    .carousel .carousel-indicators .active {
+      background-color: #2f5aa5; }
   .carousel-control-prev, .carousel-control-next {
     width: 10%;
     max-width: 50px;
@@ -432,10 +437,10 @@ i {
       display: flex;
       align-items: center; } }
 
-/*Carousel de bootstrap: modif estilos con clases propias*/
+/*Carousel de bootstrap: modificación de estilos con clases propias*/
 .c-cards {
-  width: 100%;
   display: flex;
+  width: 100%;
   padding: 5px 10px; }
   .c-cards .c-card:nth-child(even) {
     display: none; }
@@ -446,10 +451,13 @@ i {
 .c-card {
   margin: 10px;
   background-color: #f6f6f6;
-  text-align: center; }
+  text-align: center;
+  overflow: hidden;
+  position: relative; }
   .c-card__img-box {
     width: 100%;
     height: 61vh;
+    min-height: 300px;
     margin: auto;
     overflow: hidden; }
     .c-card__img-box img {
@@ -460,13 +468,13 @@ i {
       transition: all .3s ease-in-out; }
   .c-card__body {
     width: 100%;
-    height: 17%;
+    height: 75px;
     display: flex;
     flex-direction: column;
     justify-content: start;
     align-items: center;
     position: absolute;
-    bottom: 7px;
+    bottom: 0px;
     background-color: #f6f6f6;
     transition: all .3s ease-in-out; }
     .c-card__body__icons {
@@ -479,12 +487,12 @@ i {
         font-weight: 300;
         line-height: 1.5;
         text-align: justify;
-        padding: 5px 3px; }
+        padding: 0px 3px; }
   .c-card:hover .c-card__img-box img {
     scale: 1.1;
     filter: brightness(80%); }
   .c-card:hover .c-card__body {
-    height: 32%; }
+    height: 150px; }
     .c-card:hover .c-card__body__btn {
       visibility: visible; }
   @media (min-width: 700px) {
@@ -492,59 +500,56 @@ i {
       width: 50%; } }
 
 /*PÁGINA 2: NUESTROS TOURS*/
-@media (min-width: 700px) {
-  .tours {
-    background-image: url("../media/fondo-md-nuestrostours.png");
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: 100% 100%; } }
-
-@media (min-width: 992px) {
-  .tours {
-    background-image: url("../media/fondo-lg-nuestrostours.png"); } }
-
-.tours-flex {
-  display: grid;
-  margin: auto;
-  padding: 25px;
-  width: 90vw;
-  column-gap: 25px;
-  row-gap: 14px;
-  grid-template: "flextours_text" auto "card0" 440px / auto; }
-  .tours-flex__container {
-    grid-area: flextours_text;
-    text-align: justify; }
-    .tours-flex__container__text {
-      color: #282828;
-      font-size: 1.1rem;
-      font-weight: 300;
-      line-height: 1.5;
-      text-align: justify; }
-    @media (min-width: 992px) {
-      .tours-flex__container {
-        width: 80%; } }
+.tours {
+  background-image: url("../media/fondo-sm-nuestrostours.png"); }
   @media (min-width: 700px) {
-    .tours-flex {
-      grid-template: "flextours_text card0" 530px / 2fr 2fr;
-      padding: 50px 20px 20px 20px; } }
+    .tours {
+      background-image: url("../media/fondo-md-nuestrostours.png"); } }
   @media (min-width: 992px) {
-    .tours-flex {
-      grid-template: "flextours_text card0" 530px / 4fr 3fr;
-      width: 70%; } }
-
-.tours-gral {
-  margin-top: 40px;
-  padding: 40px 0px; }
-  .tours-gral__container {
-    width: 90%;
-    text-align: center;
-    margin: auto; }
-    .tours-gral__container__text {
-      color: #282828;
-      font-size: 1.1rem;
-      font-weight: 300;
-      line-height: 1.5;
-      text-align: center; }
+    .tours {
+      background-image: url("../media/fondo-lg-nuestrostours.png"); } }
+  .tours-flex {
+    display: grid;
+    margin: auto;
+    padding: 25px;
+    width: 90vw;
+    column-gap: 25px;
+    row-gap: 14px;
+    grid-template: "flextours_text" auto "card0" 440px / auto; }
+    .tours-flex__container {
+      padding-top: 30px;
+      grid-area: flextours_text;
+      text-align: justify; }
+      .tours-flex__container__text {
+        color: #282828;
+        font-size: 1.1rem;
+        font-weight: 300;
+        line-height: 1.5;
+        text-align: justify; }
+      @media (min-width: 992px) {
+        .tours-flex__container {
+          width: 80%; } }
+    @media (min-width: 700px) {
+      .tours-flex {
+        grid-template: "flextours_text card0" 530px / 2fr 2fr;
+        padding: 70px 20px 20px 20px; } }
+    @media (min-width: 992px) {
+      .tours-flex {
+        grid-template: "flextours_text card0" 530px / 4fr 3fr;
+        width: 70%; } }
+  .tours-gral {
+    margin-top: 40px;
+    padding: 40px 0px; }
+    .tours-gral__container {
+      width: 90%;
+      text-align: center;
+      margin: auto; }
+      .tours-gral__container__text {
+        color: #282828;
+        font-size: 1.1rem;
+        font-weight: 300;
+        line-height: 1.5;
+        text-align: center; }
 
 .card0 {
   grid-area: card0;
@@ -614,7 +619,7 @@ i {
     bottom: 0;
     left: 0;
     padding: 0px 8%;
-    background-color: rgba(255, 255, 255, 0.8);
+    background-color: #eff5ffe0;
     transition: all .4s ease-in-out; }
     .g-card__body__title {
       height: fit-content;
@@ -637,7 +642,7 @@ i {
       transition: all .4s ease-in-out; }
       @media (min-width: 700px) {
         .g-card__body__overlay {
-          font-size: .9rem; } }
+          font-size: 0.9rem; } }
     .g-card__body__icons {
       width: 100%;
       display: flex;
@@ -646,7 +651,7 @@ i {
     transform: translateY(-25px); }
     .g-card:hover .g-card__body {
       height: 100%;
-      background-color: rgba(255, 255, 255, 0.671); }
+      background-color: rgba(233, 239, 255, 0.774); }
       .g-card:hover .g-card__body__overlay {
         opacity: 1; }
       .g-card:hover .g-card__body__btn {
@@ -671,20 +676,45 @@ i {
 
 /*PÁGINA 3 y 5: RESERVAR y CONTACTO*/
 .section-formulario {
-  background-color: #f6f6f6; }
+  margin: auto;
+  padding: 40px 0px; }
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: stretch;
+  width: 37vw;
+  min-width: 300px;
+  margin: auto;
+  padding: 30px 15px;
+  background-color: rgba(255, 255, 255, 0.405);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.11);
+  border-radius: 30px; }
+
+.main-reservar .section-formulario {
+  background-image: url("../media/main-reservar-bg.svg"); }
+
+.main-contacto .section-formulario {
+  background-image: url("../media/main-contacto-bg.svg"); }
 
 .form-label {
   color: #2f5aa5;
   font-size: 1rem;
+  font-weight: 500;
   height: min-content; }
 
 .btn-form {
   color: #f6f6f6;
-  font-size: 1.1rem;
-  background-color: #ff9977; }
+  background-color: #ff9977;
+  border: 2px solid #f6f6f6;
+  border-radius: 25px;
+  font-size: 1.1rem; }
   .btn-form:hover {
     color: #f6f6f6;
-    background-color: #2f5aa5; }
+    background-color: #2f5aa5;
+    border: 2px solid transparent; }
 
 input[type="radio"] {
   display: none; }
@@ -704,45 +734,58 @@ input[type="radio"] {
     font-size: 1rem; }
   .contact-box__input::placeholder {
     visibility: hidden; }
-  .contact-box__input:focus + .contact-box__label, .contact-box__input:valid + .contact-box__label {
+  .contact-box__input:focus + .contact-box__label,
+  .contact-box__input:valid + .contact-box__label {
     top: -16px;
-    font-size: .8rem;
+    font-size: 0.8rem;
     background: #f6f6f6; }
 
 .contact-map iframe {
   width: 90%;
   height: 90%;
-  min-height: 500px; }
+  min-height: 400px;
+  margin: auto; }
 
 /*formulario de reservas*/
 .tour-type {
-  margin: 10px 0px;
-  padding: 10px 0px 0px 0px; }
+  padding: 10px 0px 0px 0px;
+  display: flex;
+  flex-direction: row; }
   .tour-type__option {
-    padding: 10px 0px 0px 0px;
     display: flex;
-    flex-direction: column; }
+    flex-direction: column;
+    padding: 10px 0px 0px 0px;
+    width: 50%; }
     .tour-type__option__label {
+      margin: 2px;
       padding: 6px 20px;
-      border: 2px solid #f6f6f6;
+      box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.11);
       background-color: #d4d4d4;
       color: #4a4a4a;
-      text-align: center; }
+      font-size: .9rem;
+      text-align: center;
+      cursor: pointer; }
     .tour-type__option__input:checked + .tour-type__option__label {
       background-color: #2f5aa5;
       color: #f6f6f6; }
     .tour-type__option__input:checked ~ .tour-type__option__subform {
-      opacity: 100%;
       height: auto; }
     .tour-type__option__input:not(:checked) ~ .tour-type__option__subform {
-      opacity: 0%;
       padding: 0;
-      height: 0px; }
+      height: 0px;
+      overflow: hidden; }
     .tour-type__option__subform {
-      padding: 25px 0px 10px 0px;
-      transition: opacity .2s;
       display: flex;
-      flex-wrap: wrap; }
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      padding: 8px 5px;
+      background-color: rgba(255, 255, 255, 0.538);
+      box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.11);
+      border-radius: 20px;
+      font-size: .9rem;
+      transition: all .25s ease-in-out; }
       .tour-type__option__subform .form-label {
         color: #e56e46; }
       .tour-type__option__subform .form-check {
@@ -751,12 +794,19 @@ input[type="radio"] {
 .tour-flex > .tour-type__option__label {
   border-radius: 25px 0 0 25px; }
 
+.tour-flex > .tour-type__option__subform {
+  margin: 20px 3px 5px 8px; }
+
 .tour-pre > .tour-type__option__label {
   border-radius: 0 25px 25px 0; }
 
+.tour-pre > .tour-type__option__subform {
+  padding: 10px 6px 30px 6px;
+  margin: 20px 8px 5px 3px; }
+
 /*PÁGINA 4: BLOG*/
 .main-blog {
-  background-color: #f6f6f6; }
+  background-image: url("../media/main-blog-bg.svg"); }
   .main-blog .title-small {
     padding-top: 40px; }
 
@@ -778,10 +828,9 @@ input[type="radio"] {
   overflow: hidden;
   border-radius: 25px;
   height: 450px;
+  background-color: rgba(255, 255, 255, 0.138);
   box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
   border-radius: 25px;
-  background-size: cover;
-  background-position: center;
   transition: translate .3s; }
   .blog-article:hover {
     translate: 0px -20px; }

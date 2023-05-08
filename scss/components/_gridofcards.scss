@@ -69,7 +69,7 @@
         bottom: 0;
         left: 0;
         padding: 0px 8%;
-        background-color: rgba(255, 255, 255, 0.8);
+        background-color: #eff5ffe0;
         transition: all .4s ease-in-out;
         
         &__title {
@@ -87,7 +87,7 @@
             transition: all .4s ease-in-out;
 
             @include tablet {
-                font-size: .9rem;
+                font-size: $text-sm;
             }
         }
 
@@ -103,7 +103,7 @@
         & .g-card {
             &__body {
             height: 100%;
-            background-color: rgba(255, 255, 255, 0.671);
+            background-color: rgba(233, 239, 255, 0.774);
                 &__overlay {
                     opacity: 1;
                 } 

@@ -1,25 +1,45 @@
 /*PÁGINA 3 y 5: RESERVAR y CONTACTO*/
 
-.section-formulario{
-    background-color: map-get($colors, "offwhite");
+.section-formulario {
+    margin: auto;
+    padding: 40px 0px ;
+}
+
+.formulario {
+    @include flex (column, center, stretch);
+    width: 37vw;
+    min-width: 300px;
+    margin: auto;
+    padding: 30px 15px;
+    background-color: rgba(255, 255, 255, 0.405);
+    backdrop-filter: blur(5px);
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.11);
+    border-radius: 30px;
+}
+
+.main-reservar {
+    .section-formulario {
+        background-image: url("../media/main-reservar-bg.svg");
+    }
+}
+.main-contacto {
+    .section-formulario {
+        background-image: url("../media/main-contacto-bg.svg");
+    }
 }
 
 .form-label {
-    @include font (map-get($colors, "trueblue"), 1rem, null);
+    @include font (map-get($colors, "trueblue"), 1rem, 500);
     height: min-content;
 }
 
 .btn-form {
-    @include font (map-get($colors, "offwhite"), 1.1rem, null);
-    background-color: map-get($colors, "truesalmon");
-
-    &:hover {
-        color: map-get($colors, "offwhite");
-        background-color: map-get($colors, "trueblue");
-    }
+    @include button (map-get($colors, "offwhite"), map-get($colors, "truesalmon"),
+        map-get($colors, "offwhite"), 25px, map-get($colors, "trueblue"));
+    font-size: $text-s;
 }
 
-input[type="radio"]{
+input[type="radio"] {
     display: none;
 }
 
@@ -39,70 +59,79 @@ input[type="radio"]{
         @include font (map-get($colors, "trueblue"), 1rem, null);
     }
 
-    &__input{
+    &__input {
         &::placeholder {
             visibility: hidden;
         }
-        &:focus + .contact-box__label, &:valid + .contact-box__label {
+
+        &:focus+.contact-box__label,
+        &:valid+.contact-box__label {
             top: -16px;
-            font-size: .8rem;
+            font-size: $text-xsm;
             background: map-get($colors, "offwhite");
         }
-
     }
 }
 
 .contact-map iframe {
     @include box (90%);
-    min-height: 500px;
+    min-height: 400px;
+    margin: auto;
 }
 
 /*formulario de reservas*/
 
+
 .tour-type {
-    margin: 10px 0px;
     padding: 10px 0px 0px 0px;
+    @include flex (row, null, null);
 
     &__option {
-        padding: 10px 0px 0px 0px;
         @include flex (column, null, null);
+        padding: 10px 0px 0px 0px;
+        width: 50%;
 
         &__label {
+            margin: 2px;
             padding: 6px 20px;
-            border: 2px solid map-get($colors, "offwhite");
-            background-color:#d4d4d4;
+            box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.11);
+            background-color: #d4d4d4;
             color: #4a4a4a;
+            font-size: .9rem;
             text-align: center;
+            cursor: pointer; 
         }
 
         &__input {
             &:checked {
-                & + .tour-type__option__label {
+                &+.tour-type__option__label {
                     background-color: map-get($colors, "trueblue");
                     color: map-get($colors, "offwhite");
                 }
 
-                & ~ .tour-type__option__subform {
-                    opacity: 100%;
+                &~.tour-type__option__subform {
                     height: auto;
                 }
             }
 
             &:not(:checked) {
-                & ~ .tour-type__option__subform {
-                    opacity: 0%;
+                &~.tour-type__option__subform {
                     padding: 0;
                     height: 0px;
+                    overflow: hidden;
                 }
-
             }
         }
 
         &__subform {
-            padding: 25px 0px 10px 0px;
-            transition: opacity .2s;
-            display: flex;
+            @include flex (row, center, center);
             flex-wrap: wrap;
+            padding: 8px 5px;
+            background-color: rgba(255, 255, 255, 0.538);
+            box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.11);
+            border-radius: 20px;
+            font-size: .9rem;
+            transition: all .25s ease-in-out;
 
             & .form-label {
                 color: map-get($colors, "deepsalmon");
@@ -115,10 +144,21 @@ input[type="radio"]{
     }
 }
 
-.tour-flex > .tour-type__option__label {
-    border-radius: 25px 0 0 25px;
+.tour-flex>.tour-type__option{
+    &__label {
+        border-radius: 25px 0 0 25px;
+    }
+    &__subform {
+        margin: 20px 3px 5px 8px;
+    }
 }
 
-.tour-pre > .tour-type__option__label {
-    border-radius: 0 25px 25px 0;
+.tour-pre>.tour-type__option{
+    &__label {
+        border-radius: 0 25px 25px 0;
+    }
+    &__subform {
+        padding: 10px 6px 30px 6px;
+        margin: 20px 8px 5px 3px;
+    }
 }

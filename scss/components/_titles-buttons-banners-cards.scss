@@ -1,18 +1,21 @@
-/*Títulos y botones para todas las páginas */
+/*COMPONENTES COMUNES A TODAS LAS PÁGINAS*/
+/*TÍTULOS Y BOTONES para todas las páginas */
 
 .title-big {
-    @include font (map-get($colors, "offwhite"), 3.3rem, 500);
+    @include font (map-get($colors, "offwhite"), $text-xl, 500);
     padding: 10px 0px;
     animation: fadein 1s ease-in-out;
+    font-family: $font1;
 }
 
 .title-small {
-    @include font (map-get($colors, "trueblue"), 2.2rem, 500);
+    @include font (map-get($colors, "trueblue"), $text-l, 500);
     margin: 0 auto 35px auto;
     padding: 5px 0px;
     position: relative;
     text-align: center;
     transition: color .2s;
+    font-family: $font1;
 
     &::after {
         content:"";
@@ -27,23 +30,27 @@
 }
 
 .subtitle-big {
-    @include font (map-get($colors, "offwhite"), 2rem, 500);
+    @include font (map-get($colors, "offwhite"), $text-l, 500);
     padding: 0px 0px 20px 0px;
     animation: fadein 2s ease-in-out;
+    font-family: $font1;
 }
 
 .subtitle-small {
     @include font (map-get($colors, "trueblue"), null, 500);
     padding-top: 30px;
+    font-family: $font1;
 }
 
 .title-colored {
     color: map-get($colors, "truesalmon");
+    font-family: $font1;
 }
 
 .btn-big {
-    @include font (map-get($colors, "lightsalmon"), 1.4rem, 500);
     @include button (map-get($colors, "lightsalmon"), transparent, map-get($colors, "trueblue"), 40px);
+    font-size: $text-m;
+    font-weight: bold;
     animation: fadein 2.5s ease-in-out;
     transition: 0.2s;
 }
@@ -54,13 +61,15 @@
     100% { opacity: 100%; }
 }
 
-/*section-banner: banner con fondo completo de imagen - primer banner de todas las páginas */
+/*BANNER de todas las páginas (banner con fondo completo de imagen) */
 
-.section-banner {
-    @include flex (column, center, start);
+.full-img-bg {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+}
+.section-banner {
+    @include flex (column, center, start);
     padding: 0 5vw;
 }
 
@@ -68,16 +77,11 @@ $sections: (index1, index2, tours, reservar, blog, contacto);
 
 @each $section in $sections {
     .banner-#{$section} {
-        background-image: url("../media/img-banner-#{$section}.jpg");
+        background-image: url("../media/img-banner-#{$section}.avif");
     }
 }
 
-.banner-index2 {
-    align-items: end;
-}
-
-
-/*Cards de todas las páginas*/
+/*CARDS de todas las páginas*/
 
 .c-card, .g-card {
     @include box (100%);
@@ -88,14 +92,15 @@ $sections: (index1, index2, tours, reservar, blog, contacto);
 }
 
 .c-card__body__title, .g-card__body__title, .blog-article__body__title {
-    @include font (map-get($colors, "trueblue"), 1.2rem, bold);
-    padding: 10px 0px 5px 0;
+    @include font (map-get($colors, "trueblue"), $text-s, bold);
+    padding: 10px 0px 5px 0px;
+    font-family: $font1;
 }
 
 .c-card__body__btn, .g-card__body__btn {
     @include button (map-get($colors, "trueblue"), transparent);
     visibility: hidden;
-    font-weight: 500;
+    font-weight: bold;
     padding: 5px 10px;
     transition: all .3s ease-in-out;
 }

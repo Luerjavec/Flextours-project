@@ -1,7 +1,7 @@
 //variables y mapas map-get($colors, "offblack");
 $colors: (
     "trueblue": #2f5aa5,
-    "lightsalmon": #E8B7A6,
+    "lightsalmon": #ffc2ae,
     "truesalmon": #ff9977,
     "deepsalmon": #e56e46,
     "lightblue": #e1e9f7,
@@ -9,14 +9,15 @@ $colors: (
     "offblack": #282828,
 );
 
-$font1: ‘Roboto’, sans-serif;
-$font2: ‘Nunito’, sans-serif;
+$font1: 'Roboto', sans-serif;
+$font2: 'Nunito', sans-serif;
 
 $text-xl: 3.3rem;
 $text-l: 2.2rem;
 $text-m: 1.4rem;
 $text-s: 1.1rem;
 $text-sm: 0.9rem;
+$text-xsm: 0.8rem;
 
 //mixins
 
@@ -44,10 +45,11 @@ $text-sm: 0.9rem;
     align-items: $align;
 }
 
-@mixin font ($color, $size, $weight) {
+@mixin font ($color, $size, $weight, $family:null) {
     color: $color;
     font-size: $size;
     font-weight: $weight;
+    font-family: $family;
 }
 
 @mixin gral_text ($size: #{$text-s}, $weight: 300, $textalign: justify) {
@@ -58,14 +60,21 @@ $text-sm: 0.9rem;
     text-align: $textalign;
 }
 
-@mixin button ($bordercolor, $bgcolor: transparent, $hovercolor: map-get($colors, "offwhite"), $radius: 25px) {
+@mixin button ($bordercolor, $bgcolor: transparent, $hovercolor: map-get($colors, "offwhite"), $radius: 25px, $hoverbgcolor: $bordercolor) {
     color: $bordercolor;
     background-color: $bgcolor;
     border: 2px solid $bordercolor;
-    border-radius: $radius; 
+    border-radius: $radius;
+
     &:hover {
         color: $hovercolor;
-        background-color: $bordercolor;
+        background-color: $hoverbgcolor;
         border: 2px solid transparent;
     }
+}
+
+@mixin bgimg {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
 }

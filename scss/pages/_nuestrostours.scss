@@ -1,11 +1,10 @@
 /*PÁGINA 2: NUESTROS TOURS*/
 
 .tours {
+    background-image: url("../media/fondo-sm-nuestrostours.png");
+    
     @include tablet {
         background-image: url("../media/fondo-md-nuestrostours.png");
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: 100% 100%;
     }
     @include desktop {
         background-image: url("../media/fondo-lg-nuestrostours.png");
@@ -24,6 +23,7 @@
             / auto;
     
         &__container {
+            padding-top: 30px;
             grid-area: flextours_text;
             text-align: justify;
 
@@ -40,7 +40,7 @@
             grid-template:
                 "flextours_text card0" 530px
                 / 2fr 2fr;
-            padding: 50px 20px 20px 20px;
+            padding: 70px 20px 20px 20px;
         }
 
         @include desktop {

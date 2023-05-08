@@ -1,7 +1,7 @@
 /*PÁGINA 4: BLOG*/
 
 .main-blog{
-    background-color: map-get($colors, "offwhite");
+    background-image: url("../media/main-blog-bg.svg");
 
     & .title-small {
     padding-top: 40px;
@@ -26,10 +26,9 @@
     overflow: hidden;
     border-radius: 25px;
     height: 450px;
+    background-color: rgba(255, 255, 255, 0.138);
     box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.16);
     border-radius: 25px;
-    background-size: cover;
-    background-position: center;
     transition: translate .3s;
 
     &:hover {

@@ -1,4 +1,5 @@
-/*HEADER de todas las páginas - Elementos Offcanvas*/
+/*HEADER de todas las páginas*/
+/* Elementos Offcanvas del header*/
 
 .offcanvas {
     background-color: rgba(0, 0, 0, 0.83);
@@ -8,7 +9,7 @@
     background-color: map-get($colors, "ofwhite");
 }
 
-/*HEADER de todas las páginas - Elementos navegables*/
+/*Elementos navegables del header*/
 
 .navbar-toggler{
     background-color: rgba(255, 255, 255, 0.448);
@@ -24,7 +25,7 @@
 }
 
 .nav-link {
-    @include font (map-get($colors, "lightsalmon"), 1.1rem, 500);
+    @include font (map-get($colors, "lightsalmon"), $text-s, 500, $font1);
     margin: 0px 12px;
     position: relative;
     transition: color .2s;
@@ -43,16 +44,15 @@
         background: map-get($colors, "offwhite");
     }
 
-    &:hover{
+    &:hover, &:active{
         color: map-get($colors, "offwhite");
-    }
-
-    &:hover::after{
-        transform: scale(1, 1);
+        &::after {
+            transform: scale(1, 1);
+        }
     }
 }
 
-/*HEADER - elemento de búsqueda mobile - siempre desplegado*/
+/*Elemento de búsqueda header*/
 .searchbar {
     background-color: #ffffff3e;
     border-radius: 30px;
@@ -108,13 +108,12 @@
     background: linear-gradient(126deg, rgba(0,55,105,1) 9%, rgba(0,0,105,1) 100%);
 
     &__title {
-        @include font (map-get($colors, "lightsalmon"), 1.2rem, 500);
-        font-family:'Nunito', sans-serif;
+        @include font (map-get($colors, "lightsalmon"), $text-s, 500);
         padding: 10px 0px;
     }
 
     &__text, &__link {
-        @include font (map-get($colors, "offwhite"), .9rem, null);
+        @include font (map-get($colors, "offwhite"), $text-sm, null);
         text-align: justify;
     }
 

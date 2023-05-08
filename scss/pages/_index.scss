@@ -72,12 +72,11 @@
 /*PÁGINA 1: INDEX - sección con 3 items (por qué elegirnos y clientes)*/
 
 .section-items {
-    background-color: map-get($colors, "offwhite");
+    background-image: url("../media/section-items-bg.png");
+    margin: auto;
 }
 
 .items {
-    align-items: start;
-    justify-content: center;
     margin: auto;
     
     &__article {
@@ -98,8 +97,7 @@
         }
 
         &__p{
-            @include gral_text;
-            text-align: justify;
+            @include gral_text (1rem);
             padding-top: 10px;
         }
     }
@@ -108,7 +106,7 @@
 /*PÁGINA 1: INDEX - sección del carousel */
 
 .section-carousel {
-    background-color: map-get($colors, "lightblue");
+    background-image: url("../media/section-carousel-bg.png");
     height: auto;
     justify-content: center;
     align-items: center;
@@ -120,8 +118,9 @@
         }
 
         &__btn {
-            @include font (map-get($colors, "trueblue"), 1.10rem, bold);
             @include button (map-get($colors, "trueblue"), transparent);
+            font-size: $text-s;
+            font-weight: bold;
             margin: 10px 0 0 0;
             transition: 0.2s;
         }
