@@ -1,5 +1,5 @@
 /*COMPONENTES COMUNES A TODAS LAS PÁGINAS*/
-/*TÍTULOS Y BOTONES para todas las páginas */
+    /*Títulos y botones comunes*/
 
 .title-big {
     @include font (map-get($colors, "offwhite"), $text-xl, 500);
@@ -53,6 +53,7 @@
     font-weight: bold;
     animation: fadein 2.5s ease-in-out;
     transition: 0.2s;
+    padding: 6px 12px;
 }
 
 @keyframes fadein {
@@ -61,7 +62,7 @@
     100% { opacity: 100%; }
 }
 
-/*BANNER de todas las páginas (banner con fondo completo de imagen) */
+    /*Banner de todas las páginas (con fondo completo de imagen)*/
 
 .full-img-bg {
     background-repeat: no-repeat;
@@ -81,26 +82,29 @@ $sections: (index1, index2, tours, reservar, blog, contacto);
     }
 }
 
-/*CARDS de todas las páginas*/
+    /*Cards de todas las páginas*/
 
 .c-card, .g-card {
     @include box (100%);
     position: relative;
     overflow: hidden;
     border-radius: 25px;
-    box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.17);
+    box-shadow: 0px 3px 15px map-get($colors, "shadow");
+    transition: all .3s;
+
+    &__body__btn {
+        @include button (map-get($colors, "trueblue"), transparent);
+        visibility: hidden;
+        font-weight: bold;
+        padding: 5px 10px;
+        transition: all .3s ease-in-out;
+    }
 }
 
-.c-card__body__title, .g-card__body__title, .blog-article__body__title {
-    @include font (map-get($colors, "trueblue"), $text-s, bold);
-    padding: 10px 0px 5px 0px;
-    font-family: $font1;
-}
-
-.c-card__body__btn, .g-card__body__btn {
-    @include button (map-get($colors, "trueblue"), transparent);
-    visibility: hidden;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: all .3s ease-in-out;
+.c-card, .g-card, .blog-article{
+    &__body__title{
+        @include font (map-get($colors, "trueblue"), $text-s, bold);
+        padding: 10px 0px 5px 0px;
+        font-family: $font1;
+    }
 }

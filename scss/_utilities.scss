@@ -1,12 +1,15 @@
-//variables y mapas map-get($colors, "offblack");
+//variables y mapas
+
 $colors: (
     "trueblue": #2f5aa5,
     "lightsalmon": #ffc2ae,
     "truesalmon": #ff9977,
     "deepsalmon": #e56e46,
     "lightblue": #e1e9f7,
+    "transpwhite": #ffffff44,
     "offwhite": #f6f6f6,
     "offblack": #282828,
+    "shadow": #00000024,
 );
 
 $font1: 'Roboto', sans-serif;
@@ -66,7 +69,7 @@ $text-xsm: 0.8rem;
     border: 2px solid $bordercolor;
     border-radius: $radius;
 
-    &:hover {
+    &:hover, &:focus{
         color: $hovercolor;
         background-color: $hoverbgcolor;
         border: 2px solid transparent;

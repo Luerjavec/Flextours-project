@@ -1,4 +1,5 @@
-/*PÁGINA 1: INDEX. Animación del título "Buenos Aires es..." */
+/*PÁGINA 1: INDEX. 
+    /*Index - Animación del título "Buenos Aires es..." */
 
 .tiping-animation::before {
     content: "";
@@ -69,7 +70,7 @@
     50% { opacity: 0; }
 }
 
-/*PÁGINA 1: INDEX - sección con 3 items (por qué elegirnos y clientes)*/
+    /*Index - sección con 3 items (por qué elegirnos y clientes)*/
 
 .section-items {
     background-image: url("../media/section-items-bg.png");
@@ -88,11 +89,11 @@
             border-radius: 100%;
             width: 150px;
             margin-top: 20px;
-            box-shadow: 0px 5px 25px #0000002c;
+            box-shadow: 0px 5px 25px map-get($colors, "shadow");
+            transition: .3s ease-in-out;
 
             &:hover{
                 transform: translate(0px, -12px);
-                transition: .3s ease-in-out;
             }
         }
 
@@ -103,7 +104,7 @@
     }
 }
 
-/*PÁGINA 1: INDEX - sección del carousel */
+    /*Index - sección del carousel */
 
 .section-carousel {
     background-image: url("../media/section-carousel-bg.png");

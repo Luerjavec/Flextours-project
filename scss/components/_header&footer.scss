@@ -1,18 +1,18 @@
 /*HEADER de todas las páginas*/
-/* Elementos Offcanvas del header*/
+    /*Header - elementos Offcanvas*/
 
 .offcanvas {
-    background-color: rgba(0, 0, 0, 0.83);
+    background-color: #000000d4;
 }
 
 .btn-close {
     background-color: map-get($colors, "ofwhite");
 }
 
-/*Elementos navegables del header*/
+    /*Header - elementos navegables*/
 
 .navbar-toggler{
-    background-color: rgba(255, 255, 255, 0.448);
+    background-color: #ffffff72;
 
     &:focus, &:hover{
         background-color: map-get($colors, "ofwhite");
@@ -44,7 +44,7 @@
         background: map-get($colors, "offwhite");
     }
 
-    &:hover, &:active{
+    &:hover, &:focus{
         color: map-get($colors, "offwhite");
         &::after {
             transform: scale(1, 1);
@@ -52,9 +52,9 @@
     }
 }
 
-/*Elemento de búsqueda header*/
+    /*Header - elemento de búsqueda*/
 .searchbar {
-    background-color: #ffffff3e;
+    background-color: map-get($colors, "transpwhite");
     border-radius: 30px;
     padding: 5px;
 

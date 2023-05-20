@@ -8,6 +8,9 @@
     <meta name="keywords" content="tours personalizados, tours prearmados, elegir puntos, citytours, Buenos Aires, La Boca, Recoleta, Tango">
     <meta name="description"
         content="Descubre Buenos Aires con nuestros tours personalizados o prearmados. En Flextours ofrecemos una variedad de opciones para que explores la ciudad a tu medida">
+    <title>Citytours personalizados por Buenos Aires | Flextours </title>
+    <link rel="shortcut icon" href="../media/favicon-flextours.png">
+    
     <!-- iconos de fontawesome -->
     <script src="https://kit.fontawesome.com/b8e046c231.js" crossorigin="anonymous"></script>
     <!-- framework bootstrap -->
@@ -18,9 +21,6 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- mis estilos CSS -->
     <link rel="stylesheet" href="../css/style.css">
-
-    <title>Citytours personalizados por Buenos Aires | Flextours </title>
-    <link rel="shortcut icon" href="../media/favicon-flextours.png">
 </head>
 
 <body>
@@ -80,16 +80,16 @@
     </header>
 
     <main>
-        <!-- Primera sección - Tipo: sección A (fondo completo imagen)-->
+        <!-- Primera sección - Tipo: sección banner (fondo completo imagen)-->
         <section
             class="section-banner banner-tours full-img-bg container-fluid vh-100">
             <h1 class="title-big">Conocé <span class="title-colored">nuestros tours</span></h1>
             <h2 class="subtitle-big">Explorá Buenos Aires con la flexibilidad que necesitás</h2>
-            <a class="btn btn-big" href="#tours"><i class="fa-solid fa-arrow-down px-1"></i></a>
+            <a class="btn-big" href="#tours"><i class="fa-solid fa-arrow-down px-1"></i></a>
         </section>
 
         <div class="tours full-img-bg">
-            <!-- Sección con grid de los tours disponibles-->
+            <!-- Sección para el tour flex-->
             <section class="tours-flex" id="tours">
                 <div class="tours-flex__container" data-aos="fade-up">
                     <h3 class="title-small">Buenos Aires a tu manera</h3>
@@ -120,11 +120,12 @@
                     </div>
                 </article>
             </section>
-
-            <section class="tours-gral">
-                <div class="tours-gral__container" data-aos="fade-up">
+            
+            <!-- sección con grid of cards para los tours prearmados-->
+            <section class="tours-prearmados">
+                <div class="tours-prearmados__container" data-aos="fade-up">
                     <h3 class="title-small">Recorridos armados por expertos</h3>
-                    <p class="tours-gral__container__text">También podés descubrir Buenos Aires con paradas definidas por un guía local experto.</p>
+                    <p class="tours-prearmados__container__text">También podés descubrir Buenos Aires con paradas definidas por un guía local experto.</p>
                 </div>
                 <div class="g-cards">
                     <article class="g-card card1" data-aos="fade-up">
@@ -145,7 +146,6 @@
                                 </div>
                                 <a class="g-card__body__btn" href="#">+ detalles</a>
                             </div>
-
                         </div>
                     </article>
                     <article class="g-card card2" data-aos="fade-up">
@@ -164,7 +164,6 @@
                                 </div>
                                 <a class="g-card__body__btn" href="#">+ detalles</a>
                             </div>
-
                         </div>
                     </article>
                     <article class="g-card card3" data-aos="fade-up">
@@ -183,7 +182,6 @@
                                 </div>
                                 <a class="g-card__body__btn" href="#">+ detalles</a>
                             </div>
-
                         </div>
                     </article>
                     <article class="g-card card4" data-aos="fade-up">
@@ -202,7 +200,6 @@
                                 </div>
                                 <a class="g-card__body__btn" href="#">+ detalles</a>
                             </div>
-
                         </div>
                     </article>
                     <article class="g-card card5" data-aos="fade-up">
@@ -221,7 +218,6 @@
                                 </div>
                                 <a class="g-card__body__btn" href="#">+ detalles</a>
                             </div>
-
                         </div>
                     </article>
                     <article class="g-card card6" data-aos="fade-up">
@@ -240,7 +236,6 @@
                                 </div>
                                 <a class="g-card__body__btn" href="#">+ detalles</a>
                             </div>
-
                         </div>
                     </article>
                 </div>
@@ -275,9 +270,12 @@
         </div>
     </footer>
 
+    <!-- script de bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
         crossorigin="anonymous"></script>
+
+    <!-- script para animaciones onscroll -->
     <script> AOS.init(); </script>
 </body>
 

@@ -1,4 +1,4 @@
-/*Grid of cards*/
+    /*Nuestros tours - Grid of cards*/
 
 .g-cards {
     display: grid;
@@ -45,19 +45,15 @@
 }
 
 .g-card {
-    transition: all .3s ease-in-out;
-
     &__img-box {
         @include box (100%);
         position: relative;
         overflow: hidden;
         
-        & img {
+        img {
             @include box (100%);
-            position: absolute;
-            top: 0;
-            left: 0;
             scale: 1.10;
+            border-radius: 25px 25px 0px 0px;
             object-fit: cover;
             transition: all .3s ease-in-out;
         }
@@ -67,13 +63,11 @@
         @include flex (column, center, center);
         position: absolute;
         bottom: 0;
-        left: 0;
         padding: 0px 8%;
         background-color: #eff5ffe0;
         transition: all .4s ease-in-out;
         
         &__title {
-            height: fit-content;
             position: absolute;
             top: 5%;
             transition: all .4s ease-in-out;
@@ -85,52 +79,47 @@
             min-height: 100px;
             opacity: 0;
             transition: all .4s ease-in-out;
-
             @include tablet {
                 font-size: $text-sm;
             }
         }
 
         &__icons {
-            width: 100%;
             @include flex (null, space-around);
+            width: 100%;
         }
     }
 
-    &:hover {
-        transform: translateY(-25px);
-        
-        & .g-card {
-            &__body {
-            height: 100%;
-            background-color: rgba(233, 239, 255, 0.774);
-                &__overlay {
-                    opacity: 1;
-                } 
-                &__btn {
-                    visibility: visible;
-                }
+    &:hover &__img-box img {
+        scale: 1.05;
+        filter: blur(2.5px);
+    }
+
+    &:hover &__body {
+        height: 100%;
+        background-color: #e9efffc5;
+            &__overlay {
+                opacity: 1;
+            } 
+            &__btn {
+                visibility: visible;
             }
-            &__img-box img {
-                scale: 1.05;
-                filter: blur(2.5px);
-            }
+    }
+
+    &:hover &__body__title {
+        &::after {
+            @include box (50px, 2px);
+            display: normal;
+            content:"";
+            position: absolute;
+            left: 0;
+            right: 0;
+            margin: auto;
+            bottom: -6px;
+            background: map-get($colors, "deepsalmon"); 
         }
-        & .g-card__body__title {
-            &::after {
-                @include box (50px, 2px);
-                display: normal;
-                content:"";
-                position: absolute;
-                left: 0;
-                right: 0;
-                margin: auto;
-                bottom: -6px;
-                background:map-get($colors, "deepsalmon"); 
-            }
-            &-big {
-                @include tablet {top: 17%;}
-            }
+        &-big {
+            @include tablet {top: 17%;}
         }
     }
 }

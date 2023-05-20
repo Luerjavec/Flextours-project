@@ -1,4 +1,4 @@
-/*Carousel de bootstrap: modificación de estilos con clases que vienen de bootstrap*/
+    /*Carousel de bootstrap: modificación de estilos con clases que vienen de bootstrap*/
 
 .carousel {
     height: 70vh;
@@ -6,7 +6,7 @@
 
     & .carousel-indicators {
         margin-top: 50px;
-        & button {
+        button {
             @include box (10px);
             border-radius: 50%;
             background-color: map-get($colors, "trueblue");
@@ -14,7 +14,7 @@
                 background-color:map-get($colors, "trueblue");
             }
         }
-        & .active {
+        .active {
             background-color:map-get($colors, "trueblue");
         }
     }
@@ -37,13 +37,13 @@
     }
 }
 
-/*Carousel de bootstrap: modificación de estilos con clases propias*/
+    /*Carousel de bootstrap: modificación de estilos con clases propias*/
 .c-cards {
     @include flex;
     width: 100%;
     padding: 5px 10px;
 
-    & .c-card:nth-child(even){
+    .c-card:nth-child(even){
         display: none;
 
         @include tablet {
@@ -54,10 +54,6 @@
 
 .c-card {
     margin: 10px;
-    background-color: map-get($colors, "offwhite");
-    text-align: center;
-    overflow: hidden;
-    position: relative;
 
     &__img-box {
         @include box (100%, 61vh);
@@ -65,9 +61,8 @@
         margin: auto;
         overflow: hidden;
         
-        & img {
+        img {
             @include box (100%, calc(100% - 75px));
-            
             border-radius: 25px 25px 0px 0px;
             object-fit: cover;
             transition: all .3s ease-in-out;
@@ -78,7 +73,7 @@
         @include box (100%, 75px);
         @include flex (column, start, center);
         position: absolute;
-        bottom: 0px;
+        bottom: 0;
         background-color: map-get($colors, "offwhite");
         transition: all .3s ease-in-out;
         
@@ -86,7 +81,7 @@
             @include flex (null, center, null);
             width: 100%;
             
-            & p {
+            p {
                 @include gral_text ($text-xsm);
                 padding: 0px 3px;
             }
@@ -94,7 +89,7 @@
     }
 
     &:hover &__img-box img {
-        scale: 1.1;
+        scale: 1.05;
         filter: brightness(80%);
     }
 
